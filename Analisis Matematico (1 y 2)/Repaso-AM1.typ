@@ -14,7 +14,7 @@
     #h(1fr)
     _Santiago Emanuel Nieva_
   ], numbering: "1", footer: [
-    #align(center)[
+    #pad(bottom: -19pt)[#align(center)[
       #square(size: 30pt, fill: rgb("#1288A5"))[
 
         #pad(4.5pt)[
@@ -24,7 +24,7 @@
 
         ]
       ]
-    ]
+    ]]
   ],
 )
 
@@ -603,18 +603,18 @@ Tomemos la función $f(x)= cos(x) - 2x$ y tomamos el intervalo $[0,pi/2]$
         2. Continuidad en $II$ : $lim_(x->a)f(x) = f(a) , forall a in II$
         3. Discontinuidades evitables y de salto
         4. Discontinuidades esenciales:
-          #align(center)[ - Asíntota Vertical en $x=a$:
+          #align(left)[ - Asíntota Vertical en $x=a$:
             $
-              lim_(x->a^(#math.plus.minus))f(x) = #math.plus.minus infinity
-            $ ]
+              lim_(x->a^(#math.plus.minus))f(x) = #math.plus.minus infinity$ ]
         5. Comportamiento en $abs(x)$ grandes:
-          #align(center)[- Asíntotas Horizontales en:\ $y=L$ #h(7pt)y/o #h(7pt) $y=M$
+          #align(left)[- Asíntotas Horizontales en:\ $y=L$ #h(7pt)y/o #h(7pt) $y=M$
             $
-              lim_(x->-infinity)f(x)=L " y/o " lim_(x->+infinity)f(x)=L
-            $]
+              lim_(x->-infinity)f(x)=L " y/o " "" lim_(x->+infinity)f(x)=L$]
 
       ]
     ],
   )
 ]
+
+
 
