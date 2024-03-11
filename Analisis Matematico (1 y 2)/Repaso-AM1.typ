@@ -172,7 +172,7 @@
 
             #v(3pt)
 
-            #subtitle(true)[ Si alguno de estas condiciones no se cumpliese: ]
+            #underline[ Si alguno de estas condiciones no se cumpliese: ]
 
             - Diremos que $f$ es #underline[discontinua] en $a$
               #v(20pt)
@@ -290,7 +290,6 @@
   ],
 )
 
-\
 #text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Continuidad en Intervalo:]]
 
 #v(10pt)
@@ -445,4 +444,177 @@ $
 
 #pagebreak()
 
-ho
+#v(15pt)
+#recuadro(
+  title: text(
+    white, size: 16pt, baseline: 8pt, weight: "regular",
+  )[Teorema del valor intermedio], title-width: 46%, height: 30%, title-direction: "left", body: [
+    #pad(
+      10pt,
+    )[
+      - Si $f$ es continua en el intervalo cerrado $[a,b]$, y $N$ es un número
+        estrictamente situado entre $f(a)$ y $f(b)$, entonces existe un número $c in (a,b)$ tal
+        que $f(c)=N$
+      - Es decir:
+      #underline(offset: 8pt, evade: false)[$f$ continua en [a,b]:]
+
+      #align(center)[
+        #pad(top: -6pt)[
+          #set text(size: 17pt, style: "italic")
+          $
+            \ "si" f(a)<N<f(b) or f(b)<N<f(a)\
+            => exists c : a<c<b | f(c) = N
+          $
+        ]
+      ]
+    ]
+  ],
+)
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(
+      white, size: 16pt, baseline: 8pt, weight: "regular",
+    )[Ejemplo en gráfica], title-width: 50%, height: 28%, width: 100%, title-direction: "left", body: [
+      #set align(center)
+      #pad(top: -11pt)[
+        #image("assets/TVINTER.png", height: 78%)
+      ]
+    ],
+  )
+]
+#subtitle(true)[
+  Ejercicios de aplicación:
+]
+
+#set text(size: 15pt);
+
+Dada la ecuación $cos(x) = 2x$ demostar que tenga solución en el intervalo $(0,pi/2)$
+
+$
+  cos(x) = 2x => cos(x)-2x =0
+$
+
+Tomemos la función $f(x)= cos(x) - 2x$ y tomamos el intervalo $[0,pi/2]$
+#pad(
+  left: 10%,
+)[
+  - $f(x)$ es continua en $[0,pi/2]$ debido a que tenemos una suma de funciones
+    continuas
+
+  #grid(
+    columns: (1fr, 1fr), rows: (auto, auto), gutter: 2pt, box(width: 50%)[
+      #set text(size: 12.77pt)
+      $
+        f(0)   &=cos(0) - 0 = 1, #h(15pt) 1>0\
+        f(pi/2)&=cos(pi/2) - 2(pi/2) \ &= 0 - pi, #h(15pt) -pi < 0
+      $
+
+    ], [#pad(
+        top: -21pt,
+      )[
+        #set par(justify: true)
+        #set text(size: 13.4pt)
+        por el teorema del valor intermedio,si $f$ es continua en $[0,pi/2]$, puedo
+        elegir $N=0$ ya que $f(pi/2)<0<f(0)$, entonces puedo asegurar que existe al
+        menos un $c in (0,pi/2)$ tal que $f(c)=0$
+      ]
+    ],
+  )
+
+]
+
+#pagebreak()
+
+#v(15pt)
+#recuadro(
+  title: text(
+    white, size: 16.5pt, baseline: 8pt, weight: "regular",
+  )[Teorema de Weierstrass], title-width: 46%, height: 20%, title-direction: "left", body: [
+    #pad(
+      left: 10pt, top: 7pt, bottom: -2pt,
+    )[
+      #set par(justify: true)
+      - Si $f$ es continua en el intervalo cerrado $[a,b]$, entonces hay al menos dos
+        puntos $x_1 "y " x_2$ en el $[a,b]$,tales que:
+    ]
+
+    #align(center)[
+      #set text(size: 16pt)
+      $
+        f(x_1)<=f(x)<=f(x_2)$ $forall x in [a,b] $
+    ]
+
+    - En otras palabras, $f$ alcanza su valor mínimo y máximo en $[a,b]$
+  ],
+)
+
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(
+      white, size: 16pt, baseline: 8pt, weight: "regular",
+    )[Ejemplo en gráfica], title-width: 50%, height: 30%, title-direction: "left", body: [
+      #set align(center)
+      #pad(top: -10pt, left: -6pt)[
+        #image("assets/weiertrass.png", height: 82%)
+      ]
+    ],
+  )
+]
+
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(
+      white, size: 16pt, baseline: 8pt, weight: "regular",
+    )[La importancia de la hipótesis], title-width: 50%, height: 27%, title-direction: "left", body: [
+      #set align(center)
+      #pad(top: -11pt, left: -6pt)[
+        #image("assets/TDW.png", height: 176pt)
+      ]
+    ],
+  )
+]
+
+#pagebreak()
+
+\
+#underline[#title[2. Derivadas:]]
+
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(
+      white, size: 16pt, baseline: 4pt, weight: "regular",
+    )[Información acerca de $f(x)$], title-width: 50%, height: 47%, title-direction: "left", width: 90%, body: [
+      #set text(size: 16pt);
+      #pad(
+        10pt, left: 12%,
+      )[
+
+        #set par(leading: 1em)
+
+        1. Dominio: $DD$om $f$ = ${x in RR | exists f(x)}$
+        2. Continuidad en $II$ : $lim_(x->a)f(x) = f(a) , forall a in II$
+        3. Discontinuidades evitables y de salto
+        4. Discontinuidades esenciales:
+          #align(center)[ - Asíntota Vertical en $x=a$:
+            $
+              lim_(x->a^(#math.plus.minus))f(x) = #math.plus.minus infinity
+            $ ]
+        5. Comportamiento en $abs(x)$ grandes:
+          #align(center)[- Asíntotas Horizontales en:\ $y=L$ #h(7pt)y/o #h(7pt) $y=M$
+            $
+              lim_(x->-infinity)f(x)=L " y/o " lim_(x->+infinity)f(x)=L
+            $]
+
+      ]
+    ],
+  )
+]
+
