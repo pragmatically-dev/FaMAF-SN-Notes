@@ -13,6 +13,7 @@
     Notas de clase - Álgebra Lineal
     #h(1fr)
     _Santiago Emanuel Nieva_
+    #line(stroke: 0.6pt + primaryColor, length: 100%  )
   ], numbering: "1", footer: [
     #pad(bottom: -19pt)[#align(center)[
       #square(size: 30pt, fill: rgb("#1288A5"))[
@@ -130,6 +131,10 @@ $overline(z dot w)=overline(z) dot overline(w)$
 ]
 
 #pagebreak()
+
+#vspace()
+
+Además notamos que 
 
 
 
