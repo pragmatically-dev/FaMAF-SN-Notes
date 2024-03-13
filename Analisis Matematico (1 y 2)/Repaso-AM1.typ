@@ -173,6 +173,8 @@
             #v(3pt)
 
             #underline[ Si alguno de estas condiciones no se cumpliese: ]
+              #set text(13pt);
+              
 
             - Diremos que $f$ es #underline[discontinua] en $a$
               #v(20pt)
@@ -263,9 +265,11 @@
     #recuadro(title: text(
       white, size: 11pt, baseline: 8pt, weight: "regular",
     )[Continuidad por Izquierda], title-width: 56%, height: 100%, body: [
+      
+      #set text(15pt)
       - Una funcion $f$ es continua por izquierda en un valor $a$ si:
       #align(center)[
-        #set text(size: 18pt)
+        #set text(size: 16pt)
         $
           lim_(x->a^-)f(x) = f(x)
         $
@@ -277,9 +281,10 @@
       title: text(
         white, size: 11pt, baseline: 8pt, weight: "regular",
       )[Continuidad por Derecha], title-width: 56%, height: 18%, title-direction: "right", body: [
+      #set text(size: 15pt)
         - Una funcion $f$ es continua por derecha en un valor $a$ si:
         #align(center)[
-          #set text(size: 18pt)
+          #set text(size: 16pt)
           $
             lim_(x->a^+)f(x) = f(x)
           $
@@ -295,10 +300,11 @@
 #v(10pt)
 
 #recuadro(
-  title: text(white, size: 16pt, baseline: 8pt, weight: "regular")[Definición], title-width: 25%, height: 13%, title-direction: "left", body: [
+  title: text(white, size: 15pt, baseline: 8pt, weight: "regular")[Definición], title-width: 25%, height: 13%, title-direction: "left", body: [
     #align(
       center,
     )[
+      #set text(size: 15pt)
       - Una funcion $f$ es continua en un intervalo abierto $(a,b)$ si es continua en
         todo #underline()[número del intervalo]
     ]
@@ -306,14 +312,15 @@
 )
 
 #recuadro(
-  title: text(white, size: 16pt, baseline: 8pt, weight: "regular")[Definición], title-width: 25%, height: 22%, title-direction: "left", body: [
+  title: text(white, size: 15pt, baseline: 8pt, weight: "regular")[Definición], title-width: 25%, height: 22%, title-direction: "left", body: [
     #align(center)[
       #v(7pt)
       #text(
-        size: 16pt,
+        size: 15pt,
       )[- Una funcion $f$ es continua en un intervalo abierto $[a,b]$ si:]
       #pad(left: 4%, top: 13%)[
         #set align(left)
+      #set text(size: 15pt)
         1. Es continua en todo número del intervalo abierto $(a,b)$
         2. Es continua por #underline[derecha] en $a$
         3. Es continua por #underline[izquierda] en $b$
@@ -324,14 +331,14 @@
 
 #recuadro(
   title: text(
-    white, size: 16pt, baseline: 8pt, weight: "regular",
+    white, size: 15pt, baseline: 8pt, weight: "regular",
   )[Propiedades de funciones continuas], title-width: 39%, height: 24%, title-direction: "left", body: [
     #align(
       center,
     )[
       #v(3pt)
       #text(
-        size: 16pt,
+        size: 15pt,
       )[- Sean $f$ y $g$ continuas en $a$, entonces tambien son continuas en $a$ las
           siguientes funciones:]
       #pad(
@@ -340,12 +347,15 @@
         #set align(left)
         #grid(
           columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 30%)[
+      #set text(size: 15pt)
+
             #set par(leading: 0.8em)
             1. $(f + g)(x)$
             2. $(f dot g)(x)$
             3. $c dot f(x), "siendo " c "constante."$
           ], box[
             #set par(leading: 0.9em)
+      #set text(size: 15pt)
 
             4. $(f/g)(x)$ _, si_ $g(a) != 0$
             5. $(f circle.small g)(x),$_si $f$ es continua en $g(a)$_
@@ -362,20 +372,20 @@
 #recuadro(
   title: text(
     white, size: 14pt, baseline: 8pt, weight: "regular",
-  )[Resultados utiles para demostrar la continuidad], title-width: 59%, height: 30%, title-direction: "left", body: [
+  )[Resultados utiles para demostrar la continuidad], title-width: 59%, height: 26%, title-direction: "left", body: [
     #align(
       center,
     )[
       #v(5pt)
       #text(
-        size: 18pt,
+        size: 15pt,
       )[- Sea $a$ un punto cualquiera #underline[dentro del dominio] #text(size: 12pt, baseline: -1.3pt)[(sin los extremos)]]
       #pad(
         left: 4%, top: 5%,
       )[
         #set align(left)
 
-        #set text(14.6pt)
+        #set text(14pt)
         #grid(
           columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(
             width: 100%, height: 30%,
@@ -400,7 +410,7 @@
 
 #subtitle(true)[Ejercicios resueltos]
 
-#set text(size: 14pt);
+#set text(size: 15pt);
 Usando la definición de continuidad y las propiedades de los limites:
 - Demostrar que $f$ es continua en $a$ :
 $
@@ -421,6 +431,7 @@ $
       3. $f(a) = lim_(x->a)f(x)$
 
     ], box[
+
       #subtitle(true)[Resuelvo:]
       #set text(size: 15pt)
       #set align(left)
@@ -447,20 +458,21 @@ $
 #v(15pt)
 #recuadro(
   title: text(
-    white, size: 16pt, baseline: 8pt, weight: "regular",
-  )[Teorema del valor intermedio], title-width: 46%, height: 30%, title-direction: "left", body: [
+    white, size: 15pt, baseline: 8pt, weight: "regular",
+  )[Teorema del valor intermedio], title-width: 46%, height: 27%, title-direction: "left", body: [
     #pad(
       10pt,
     )[
+      #set text(size: 15pt)
       - Si $f$ es continua en el intervalo cerrado $[a,b]$, y $N$ es un número
         estrictamente situado entre $f(a)$ y $f(b)$, entonces existe un número $c in (a,b)$ tal
         que $f(c)=N$
-      - Es decir:
+     
       #underline(offset: 8pt, evade: false)[$f$ continua en [a,b]:]
 
       #align(center)[
         #pad(top: -6pt)[
-          #set text(size: 17pt, style: "italic")
+          #set text(size: 15pt, style: "italic")
           $
             \ "si" f(a)<N<f(b) or f(b)<N<f(a)\
             => exists c : a<c<b | f(c) = N
@@ -475,8 +487,8 @@ $
 )[
   #recuadro(
     title: text(
-      white, size: 16pt, baseline: 8pt, weight: "regular",
-    )[Ejemplo en gráfica], title-width: 50%, height: 28%, width: 100%, title-direction: "left", body: [
+      white, size: 15pt, baseline: 8pt, weight: "regular",
+    )[Ejemplo en gráfica], title-width: 40%, height: 28%, width: 100%, title-direction: "left", body: [
       #set align(center)
       #pad(top: -11pt)[
         #image("assets/TVINTER.png", height: 78%)
@@ -500,6 +512,7 @@ Tomemos la función $f(x)= cos(x) - 2x$ y tomamos el intervalo $[0,pi/2]$
 #pad(
   left: 10%,
 )[
+  
   - $f(x)$ es continua en $[0,pi/2]$ debido a que tenemos una suma de funciones
     continuas
 
@@ -610,7 +623,6 @@ Tomemos la función $f(x)= cos(x) - 2x$ y tomamos el intervalo $[0,pi/2]$
           #align(left)[- Asíntotas Horizontales en:\ $y=L$ #h(7pt)y/o #h(7pt) $y=M$
             $
               lim_(x->-infinity)f(x)=L " y/o " "" lim_(x->+infinity)f(x)=L$]
-
       ]
     ],
   )
