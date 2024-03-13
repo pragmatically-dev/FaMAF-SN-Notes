@@ -124,6 +124,14 @@ $
 
 Dado un número complejo $z= a+b i$, se define su conjugado como $overline(z)=a-b i$  
 
+Si $z,w in CC$,se cumple que:
+#mate[$overline(z+w)=overline(z)+overline(w)$ #h(90pt) 
+$overline(z dot w)=overline(z) dot overline(w)$
+]
+
+#pagebreak()
+
+
 
  
 
