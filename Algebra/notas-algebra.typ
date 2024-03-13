@@ -54,13 +54,13 @@
   }
 }
 
-#let subtitle(underlined:true,body)={
+#let subtitle(underlined:true,size:20pt,body)={
   if underlined {
   underline()[   
-       #text(size: 20pt, baseline: -.14em)[#body]
+       #text(size: size, baseline: -.14em)[#body]
     ]
   }else{
-    text(size: 20pt, baseline: -.14em)[#body]
+    text(size: size, baseline: -.14em)[#body]
   }
 }
 
@@ -134,9 +134,85 @@ $overline(z dot w)=overline(z) dot overline(w)$
 
 #vspace()
 
-Además notamos que 
+Además notamos que si $z = a+b i$ entonces:
+#mate[$z dot overline(z)&=(a+b i)(a - b i) \ &= a^2 + b^2$]
+Por lo tanto $z dot overline(z) >=0 " " forall z in CC " "$ y es igual a 0 $<=> z=0$.
+
+
+\
+#subtitle(size:14pt)[Definición 1.0:] 
+
+Si $z in CC$, el _módulo_ de $z$ es el número real dado por
+
+#mate[$abs(z) = sqrt(z dot overline(z))$]
+
+si $z=a + b i, " " a,b in RR => abs(z) = sqrt(a^2+b^2) $ 
+
+si $z,w in CC $ entonces:
+#mate[
+  $abs(z dot w)^2 &= (z dot w )dot overline((z dot w)) \ &=z dot w dot overline(z)dot overline(w) \ &= abs(z)^2 dot abs(w)^2$
+]
+
+por lo tanto $abs(z dot w ) = abs(z) dot abs(w)$
+
+\
+#subtitle(size:14pt)[Definición 1.1:] 
+
+Sea $z=a + b i ", "$  $a,b in CC, z!=0$. El inverso de un número complejo $z =a+b i$ es:
+#mate[
+  $z^(-1) =overline(z)/abs(z)^2 = a/(a^2+b^2) - b/(a^2+b^2)i$ 
+]
+
+
+#underline[Notación]: Si $z,w in CC" "$ y $w!=0$, $z/w = z dot w^(-1)$
+
+\
+
+#subtitle(size:14pt)[Ejemplo 1.1]: 
+
+Calculamos el inverso de los números complejos $2-3i " "$,$3i " "$ y $1/2 + sqrt(3)/2i$ 
+
+\
+
+#mate[
+  $
+    (2-3i)^(-1) &= (2+3i)/(2^2+3^2) = 2/13 +3/13i \
+    (3i)^(-1) &= -(3i)/(9) = -1/3i \
+    (1/2 + sqrt(3)/2i)^(-1) &= (1/2 - sqrt(3)/2i)/(1) = 1/2 - (sqrt(3))/(2)i
+  $
+]
 
 
 
- 
 
+#pagebreak()
+
+
+#vspace()
+#subtitle[Coordenadas polares:]
+
+En lugar de describir un punto en e plano por sus coordenadas con respecto a dos ejees perpendiculares, podemos describirlo como sigue.
+Trazamos una recta entre el punto y un origen dado. El ángulo con el que esta recta corta la horizontal y la distancia entre el punto y el origen determinan nuestro punto. 
+
+Asi entonces el punto se describe por un par de números $(r,theta)$  que constituyen sus coordenadas polares.
+#pad[
+#align(center)[
+  #image("assets/Coordenadas-polares.svg",height: 170pt)
+]]
+Si tenemos nuestros ejes usuales y $x "e " y " "$ son las coordenadas ordinarias de nuestro punto, entonces vemos que:
+#mate[
+  $
+    x/r = cos(theta) "  " "  " "y "  "  " " " y/r=sin(theta)
+  $
+] 
+
+
+de donde
+
+#mate[
+  $
+    x = r dot cos(theta) "  " "  " "y "  "  " " " y=r dot sin(theta)
+  $
+]
+
+Esto nos permite cambiar de coordenadas polares a coordenadas ordinarias
