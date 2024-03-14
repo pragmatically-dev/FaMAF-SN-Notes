@@ -252,4 +252,33 @@ Luego podemos representar a $z$ como:
 Por lo tanto, todo número complejo no nulo puede escribirse en su _forma polar_\ #mate[$z = r dot (" " cos(theta) + sin(theta)i " " )
 $] 
 
-donde estas expresiones están relacionadas por $a=r dot cos(theta)$ y $b=r dot sin(theta)$ ; geométricamente hablando, $r = abs(z) $ representa la distancia del número complejo al origen de coordenadas, y $theta$ es la medida #underline(stroke: 0.6pt ,offset: 2.6pt)[en redianes] del ángulo entre el eje real ($Re$) y el eje imaginario ($Im$) 
+donde estas expresiones están relacionadas por $a=r dot cos(theta)$ y $b=r dot sin(theta)$ ; geométricamente hablando, $r = abs(z) $ representa la distancia del número complejo al origen de coordenadas, y $theta$ es la medida #underline(stroke: 0.6pt ,offset: 2.6pt)[en redianes] del ángulo entre el eje real ($Re$) y la sei recta con origen en $0$, que pasa por $z$, tomando el sentido antihorario.
+
+#align(center)[
+  #figure(caption: "Representación polar",numbering: none)[
+    #image("assets/ejemplo-coord-polar.svg")
+  ]
+]
+
+#subtitle(size:14pt)[
+  Ejemplo:
+]
+
+- El número complejo $z = 1-i$ tiene modulo $sqrt(2)$, entonces:
+#mate[
+  $
+  1-i &= sqrt(2) dot (1/sqrt(2) - 1/sqrt(2)i)\
+  1-i&= underbrace((sqrt(2)),"r") dot (underbrace(1/sqrt(2),cos(theta)) + underbrace((-1/sqrt(2)),sin(theta))i)
+  $
+]
+
+Luego el argumento de $z$ es $theta = 7/4pi$ y podemos escribir:
+
+#mate[
+  $
+    z &= 1-i \ &= sqrt(2) dot (cos((7pi)/4) + sin((7pi)/(4) )i)
+  $
+]
+
+
+
