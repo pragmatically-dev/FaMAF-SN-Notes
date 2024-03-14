@@ -286,13 +286,19 @@ Luego el argumento de $z$ es $theta = 7/4pi$ y podemos escribir:
 #vspace()
 #title[1. Vectores en ℝ² y ℝ³:]
 
-Se puede utilizar una túpla $(x,y)$ para representar un punto en el #underline[plano]:
+Se puede utilizar una túpla $(x,y)$ para representar un punto en el #underline[plano], asi también una tripla $(x,y,z)$  para representar un punto en el #underline[espacio]
 
 \
 
 #align(center)[
-  #figure(caption: "Representación de puntos en el plano",numbering: none)[
+   #grid(
+          columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, figure(caption: "(a) \n Representación de puntos en el plano",numbering: none)[
     #image("assets/ejemplo-pto-plano.svg",height: 180pt)
-  ]
+  ] ,   figure(caption: "(b) \n Representación de puntos en el espacio",numbering: none)[
+    #image("assets/ejemplo-pto-espacio.svg",height: 180pt)
+  ]);
+
 ]
+
+
 
