@@ -256,7 +256,7 @@ donde estas expresiones están relacionadas por $a=r dot cos(theta)$ y $b=r dot 
 
 #align(center)[
   #figure(caption: "Representación polar",numbering: none)[
-    #image("assets/ejemplo-coord-polar.svg")
+    #image("assets/ejemplo-coord-polar.svg",height: 160pt)
   ]
 ]
 
