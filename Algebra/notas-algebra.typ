@@ -146,7 +146,7 @@ Si $z in CC$, el _módulo_ de $z$ es el número real dado por
 
 #mate[$abs(z) = sqrt(z dot overline(z))$]
 
-si $z=a + b i, " " a,b in RR => abs(z) = sqrt(a^2+b^2) $ 
+si $z=a + b i, " " a,b in RR => abs(z) = sqrt(a^2+b^2) $
 
 si $z,w in CC $ entonces:
 #mate[
@@ -197,8 +197,14 @@ Trazamos una recta entre el punto y un origen dado. El ángulo con el que esta r
 Asi entonces el punto se describe por un par de números $(r,theta)$  que constituyen sus coordenadas polares.
 #pad[
 #align(center)[
-  #image("assets/Coordenadas-polares.svg",height: 170pt)
-]]
+   #grid(
+          columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box[#image("assets/Coordenadas-polares.svg",height: 170pt)] , box[
+            #image("assets/Circulo-trigonometrico.svg",height: 170pt)
+          ] );
+
+  
+]
+]
 Si tenemos nuestros ejes usuales y $x "e " y " "$ son las coordenadas ordinarias de nuestro punto, entonces vemos que:
 #mate[
   $
@@ -215,4 +221,35 @@ de donde
   $
 ]
 
-Esto nos permite cambiar de coordenadas polares a coordenadas ordinarias
+Esto nos permite cambiar de coordenadas polares a coordenadas ordinarias.
+
+Si trasladamos esto al mundo de los complejos, recordamos que si $z=a + b i, " " a,b in RR$ entonces $abs(z) = sqrt(a^2+b^2) $, ahora si consideramos $z=a+ b i$ con $abs(z)= 1$, es decir:
+#mate[$a^2+b^2=1$]
+Sabemos por conceptos de trigonometría, especificamente las identidades pitagóricas, que:
+#mate[$cos(theta)^2 +sin(theta)^2 = 1 $]
+
+Entonces existe un número $theta in [0,2pi)$ tal que:
+#mate[
+  $a = cos(theta)$, #h(10pt) $b=sin(theta)$
+]
+Luego $z = cos(theta) + sin(theta)i$  
+#line(stroke: 1.4pt + primaryColor,length: 137pt)
+
+#pagebreak()
+#vspace();
+
+Ahora si consideramos un número complejo $z = a+b i$ cualquiera,no nulo, se cumple que:
+#mate[$
+z = abs(z) dot z/abs(z)
+$]
+
+Dado que el número complejo $z/abs(z)  $ tiene módulo 1, se sigue que es de la forma $cos(theta) + sin(theta)i$
+
+Luego podemos representar a $z$ como:
+#mate[
+  $z = abs(z) dot (" "cos(theta)+sin(theta)i " ")$
+] 
+Por lo tanto, todo número complejo no nulo puede escribirse en su _forma polar_\ #mate[$z = r dot (" " cos(theta) + sin(theta)i " " )
+$] 
+
+donde estas expresiones están relacionadas por $a=r dot cos(theta)$ y $b=r dot sin(theta)$ ; geométricamente hablando, $r = abs(z) $ representa la distancia del número complejo al origen de coordenadas, y $theta$ es la medida #underline(stroke: 0.6pt ,offset: 2.6pt)[en redianes] del ángulo entre el eje real ($Re$) y el eje imaginario ($Im$) 
