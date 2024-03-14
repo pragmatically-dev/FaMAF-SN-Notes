@@ -287,7 +287,9 @@ Luego el argumento de $z$ es $theta = 7/4pi$ y podemos escribir:
 #title[1. Vectores en ℝ² y ℝ³:]
 
 Se puede utilizar una túpla $(x,y)$ para representar un punto en el #underline[plano]:
+
 \
+
 #align(center)[
   #figure(caption: "Representación de puntos en el plano",numbering: none)[
     #image("assets/ejemplo-pto-plano.svg",height: 180pt)
