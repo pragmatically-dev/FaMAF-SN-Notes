@@ -9,13 +9,13 @@
 #set text(font: "Cambria")
 
 #set page(
-  paper: "a4", margin: (top: 46pt, left: 40pt, right: 40pt, bottom: 35pt), header: [
+  paper: "a4", margin: (top: 46pt, left: 40pt, right: 40pt, bottom: 35pt), header: move(dy:4pt)[
     #set text(size: 12pt)
 
     Notas de clase - Álgebra Lineal
     #h(1fr)
     _Santiago Emanuel Nieva_
-    #line(stroke: 0.6pt + primaryColor, length: 100%)
+   #move(dy: -5pt)[ #line(stroke: 0.6pt + primaryColor, length: 100%)]
   ], numbering: "1", footer: [
     #pad(bottom: -19pt)[#align(center)[
         #square(size: 30pt, fill: rgb("#1288A5"))[
