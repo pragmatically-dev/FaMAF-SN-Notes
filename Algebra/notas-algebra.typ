@@ -513,5 +513,105 @@ Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
     ]
   ]
 ]
-#v(-23pt)
+#v(-20pt)
 #subtitle[El opuesto de un vector]
+
+#grid(
+  columns: (2fr, 1fr), rows: (auto, auto), gutter: -51pt, 
+  [\ El opuesto de un vector $v$ en el #underline[plano] \ es $-v$ y geometricamente  es el vector \ reflejado respecto al centro.],
+  move(dy:-8%)[
+      #cetz.canvas(
+        length: 30pt, {
+          import cetz.draw: *
+
+          set-style(content: (padding: 4pt))
+
+          set-style(mark: (symbol: ">", fill: black))
+          //plano cartesiano
+          line((-2.5, 0), (2.5, 0), mark: (end: "stealth"))
+          content((), $ " "x $, anchor: "west")
+          
+          line((0, -2), (0, 3), mark: (end: "stealth"))
+          content((), $ ""y $, anchor: "west")
+
+          //escala
+          set-style(mark: (symbol: none))
+      
+          //(2,3)
+          line(
+            (0, 0), (2, 2, 0), stroke: 1.3pt + primaryColor, name: "vec-(2,2)", mark: (fill: primaryColor, end: ">"),
+          )
+            line(
+            (0, 0), (-2, -2, 0), stroke: 1.3pt + primaryColor, name: "vec-(-2,-2)", mark: (fill: primaryColor, end: ">"),
+          )
+          content("vec-(2,2).end", $v$, anchor: "west")
+          content("vec-(-2,-2).end", $-v$, anchor: "west")
+
+        },
+      );
+    
+  ]
+)
+
+#v(-25pt)
+
+
+
+#subtitle[Resta de vectores]
+
+#grid(
+  columns: (2fr, 1fr), rows: (auto, auto), gutter: -51pt, 
+  [ Dados dos vectores $v,w$ en el plano, podemos representar\ la resta como la suma de $v$ más el opuesto de w, es decir: 
+  #move(dx: 24%)[
+    #set text(size: mathTextSize)
+    $
+      v - w := v +(-w)
+    $]
+  Como $(v-w)+w = v$, la ley del paralelogramo también\ es útil para representar geométricamente la resta
+  ],
+  move(dy:-8%)[
+      #cetz.canvas(
+        length: 30pt, {
+          import cetz.draw: *
+
+          set-style(content: (padding: 4pt))
+
+          set-style(mark: (symbol: ">", fill: black))
+          //plano cartesiano
+          line((-2.5, 0), (2.5, 0), mark: (end: "stealth"))
+          content((), $ " "x $, anchor: "west")
+          
+          line((0, -2), (0, 3), mark: (end: "stealth"))
+          content((), $ ""y $, anchor: "west")
+          
+          //escala
+          set-style(mark: (symbol: none))
+      
+        line(
+            (1, 2), (3, 1, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
+          )
+          line(
+            (1, 2), (-2, 1, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
+          )
+          //(2,3)
+          line(
+            (0, 0), (1, 2, 0), stroke: 1.3pt + primaryColor, name: "vec-(2,2)", mark: (fill: primaryColor, end: ">"),
+          )
+          content("vec-(2,2).end", $v$, anchor: "west")
+
+ line(
+            (0, 0), (3, 1, 0), stroke: 1.3pt + primaryColor, name: "vec-(3,1)", mark: (fill: primaryColor, end: ">"),
+          )
+          content("vec-(3,1).end", $w$, anchor: "west")
+
+
+            line(
+            (0, 0), (-2, 1, 0), stroke: 1.3pt + primaryColor, name: "vec-(-2,-2)", mark: (fill: primaryColor, end: "o"),
+          )
+          content("vec-(-2,-2).end", $v - w$, anchor: "east")
+
+        },
+      );
+    
+  ]
+)
