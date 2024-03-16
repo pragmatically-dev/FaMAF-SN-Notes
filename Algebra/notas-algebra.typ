@@ -417,21 +417,21 @@ Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
       content((), anchor: "east", ct)
     }
 
-    line((1,4), (2,3,0),stroke:(dash:"dotted",paint:yellow)) 
-    line((1,4), (-1,1,0),stroke:(dash:"dotted",paint:yellow)) 
+    line((1,4), (2,3,0),stroke:(dash:"dotted",paint:yellow,thickness: 1.6pt)) 
+    line((1,4), (-1,1,0),stroke:(dash:"dotted",paint:yellow,thickness: 1.6pt)) 
 
 
     //sln
-    line((0, 0), (1, 4, 0),angle: 45deg,stroke:1.3pt + primaryColor,name:"vec-(1,4)")
+    line((0, 0), (1, 4, 0),stroke:1.3pt + primaryColor,name:"vec-(1,4)")
     circle("vec-(1,4).end",radius: 3pt, fill: primaryColor,stroke: none)
     content("vec-(1,4).end",$(1,4)$,anchor:"west")
 
     //(-1,1)
-    line((0, 0), (-1, 1, 0),angle: 45deg,stroke:1.3pt + primaryColor,name:"vec-(-1,1)", mark: (fill:primaryColor,end: ">"))
+    line((0, 0), (-1, 1, 0),stroke:1.3pt + primaryColor,name:"vec-(-1,1)", mark: (fill:primaryColor,end: ">"))
     content("vec-(-1,1).end",$(-1,1)$,anchor:"east")
 
     //(2,3)
-     line((0, 0), (2, 3, 0),angle: 45deg,stroke:1.3pt + primaryColor,name:"vec-(2,3)", mark: (fill:primaryColor,end: ">"))
+     line((0, 0), (2, 3, 0),stroke:1.3pt + primaryColor,name:"vec-(2,3)", mark: (fill:primaryColor,end: ">"))
     content("vec-(2,3).end",$(2,3)$,anchor:"west")
   },
 );
