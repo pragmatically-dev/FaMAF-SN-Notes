@@ -553,14 +553,13 @@ Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
   ]
 )
 
-#v(-16pt)
-
+#v(-20pt)
 
 
 #subtitle[Resta de vectores]
 
 #grid(
-  columns: (2fr, 1fr), rows: (auto, auto), gutter: -51pt, 
+  columns: (2fr, 1fr), rows: (20%, auto), gutter: -51pt, 
   [ Dados dos vectores $v,w$ en el plano, podemos representar\ la resta como la suma de $v$ más el opuesto de w, es decir: 
   #move(dx: 24%)[
     #set text(size: mathTextSize)
