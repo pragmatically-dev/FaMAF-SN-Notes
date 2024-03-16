@@ -518,7 +518,7 @@ Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
 
 #grid(
   columns: (2fr, 1fr), rows: (auto, auto), gutter: -51pt, 
-  [\ El opuesto de un vector $v$ en el #underline[plano] \ es $-v$ y geometricamente  es el vector \ reflejado respecto al centro.],
+  move(dy: 1%)[ El opuesto de un vector $v$ en el #underline[plano] \ es $-v$ y geometricamente  es el vector \ reflejado respecto al centro.],
   move(dy:-8%)[
       #cetz.canvas(
         length: 30pt, {
