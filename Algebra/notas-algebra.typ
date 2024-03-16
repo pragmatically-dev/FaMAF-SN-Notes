@@ -360,7 +360,7 @@ En otras palabras, la suma es _coordenada a coordenada_
 La suma de vectores en $RR^n$ satisface que:
 
 #align(center)[
-  #grid(columns: (1fr, 1fr), rows: (auto, auto), gutter: 0pt, box[
+  #grid(columns: (1fr, 1fr), rows: (60pt, auto), gutter: 0pt, box[
     #align(left)[
     1. Es asociativa 
       - $u+(v+w) =(u+v)+w, forall u,v,w in RR^n$
@@ -376,3 +376,6 @@ La suma de vectores en $RR^n$ satisface que:
   ]);
 
 ]
+
+#pagebreak()
+
