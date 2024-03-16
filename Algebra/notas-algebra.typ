@@ -513,7 +513,7 @@ Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
     ]
   ]
 ]
-#v(-20pt)
+#v(-10pt)
 #subtitle[El opuesto de un vector]
 
 #grid(
@@ -553,7 +553,7 @@ Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
   ]
 )
 
-#v(-25pt)
+#v(-16pt)
 
 
 
