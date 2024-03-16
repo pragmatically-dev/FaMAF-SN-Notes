@@ -9,13 +9,13 @@
 #set text(font: "Cambria")
 
 #set page(
-  paper: "a4", margin: (top: 46pt, left: 40pt, right: 40pt, bottom: 35pt), header: move(dy:4pt)[
+  paper: "a4", margin: (top: 46pt, left: 40pt, right: 40pt, bottom: 35pt), header: move(dy: 4pt)[
     #set text(size: 12pt)
 
     Notas de clase - Álgebra Lineal
     #h(1fr)
     _Santiago Emanuel Nieva_
-   #move(dy: -5pt)[ #line(stroke: 0.6pt + primaryColor, length: 100%)]
+    #move(dy: -5pt)[ #line(stroke: 1.1pt + primaryColor, length: 100%) ]
   ], numbering: "1", footer: [
     #pad(bottom: -19pt)[#align(center)[
         #square(size: 30pt, fill: rgb("#1288A5"))[
@@ -245,7 +245,7 @@ Entonces existe un número $theta in [0,2pi)$ tal que:
   $a = cos(theta)$, #h(10pt) $b=sin(theta)$
 ]
 Luego $z = cos(theta) + sin(theta)i$ 
-#line(stroke: 1.4pt + primaryColor, length: 137pt)
+#move(dy: -5pt)[#line(stroke: 1.1pt + primaryColor, length: 137pt)]
 
 #pagebreak()
 #vspace();
@@ -389,80 +389,129 @@ La suma de vectores en $RR^n$ satisface que:
 Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
 #v(10pt)
 
-#figure(
-  caption: "Representación gráfica de:  " + $v+w$, numbering: none,
-)[#Center[
-    #cetz.canvas(
-      length: 50pt, {
-        import cetz.draw: *
+#grid(
+  columns: (1fr, 1fr), rows: (24%, auto), gutter: 15pt, figure(
+    caption: "Representación gráfica de:  " + $(2,3)+(-1,1)$, numbering: none,
+  )[#Center[
+      #cetz.canvas(
+        length: 40pt, {
+          import cetz.draw: *
 
-        set-style(content: (padding: 4pt))
+          set-style(content: (padding: 4pt))
 
-        set-style(mark: (symbol: ">", fill: black))
-        //plano cartesiano
-        line((-2.5, 0), (2.5, 0), mark: (end: "stealth"))
-        content((), $ " "x $, anchor: "west")
-        set-style(mark: (symbol: none))
-        line((0, 0), (0, 3), mark: (end: "stealth"))
-        content((), $ ""y $, anchor: "west")
+          set-style(mark: (symbol: ">", fill: black))
+          //plano cartesiano
+          line((-2.5, 0), (2.5, 0), mark: (end: "stealth"))
+          content((), $ " "x $, anchor: "west")
+          set-style(mark: (symbol: none))
+          line((0, 0), (0, 3), mark: (end: "stealth"))
+          content((), $ ""y $, anchor: "west")
 
-        //escala
-        set-style(mark: (symbol: none))
-        for (x, ct) in ((-2, $ -2 $), (-1, $ -1 $), (1, $ 1 $), (2, $ 2 $)) {
-          line((x, 3pt), (x, -3pt))
-          content((), anchor: "north", ct)
-        }
+          //escala
+          set-style(mark: (symbol: none))
+          for (x, ct) in ((-2, $ -2 $), (-1, $ -1 $), (1, $ 1 $), (2, $ 2 $)) {
+            line((x, 3pt), (x, -3pt))
+            content((), anchor: "north", ct)
+          }
 
-        for (y, ct) in ((1, $ 1 $), (2, $ 2 $)) {
-          line((3pt, y), (-3pt, y))
-          content((), anchor: "east", ct)
-        }
+          for (y, ct) in ((1, $ 1 $), (2, $ 2 $)) {
+            line((3pt, y), (-3pt, y))
+            content((), anchor: "east", ct)
+          }
 
-        line(
-          (1, 4), (2, 3, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
-        )
-        line(
-          (1, 4), (-1, 1, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
-        )
+          line(
+            (1, 4), (2, 3, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
+          )
+          line(
+            (1, 4), (-1, 1, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
+          )
 
 
-        //sln
-        line((0, 0), (1, 4, 0), stroke: 1.3pt + primaryColor, name: "vec-(1,4)")
-        circle("vec-(1,4).end", radius: 3pt, fill: primaryColor, stroke: none)
-        content("vec-(1,4).end", $(1,4)$, anchor: "west")
+          //sln
+          line((0, 0), (1, 4, 0), stroke: 1.3pt + primaryColor, name: "vec-(1,4)")
+          circle("vec-(1,4).end", radius: 3pt, fill: primaryColor, stroke: none)
+          content("vec-(1,4).end", $(1,4)$, anchor: "west")
 
-        //(-1,1)
-        line(
-          (0, 0), (-1, 1, 0), stroke: 1.3pt + primaryColor, name: "vec-(-1,1)", mark: (fill: primaryColor, end: ">"),
-        )
-        content("vec-(-1,1).end", $(-1,1)$, anchor: "east")
+          //(-1,1)
+          line(
+            (0, 0), (-1, 1, 0), stroke: 1.3pt + primaryColor, name: "vec-(-1,1)", mark: (fill: primaryColor, end: ">"),
+          )
+          content("vec-(-1,1).end", $(-1,1)$, anchor: "east")
 
-        //(2,3)
-        line(
-          (0, 0), (2, 3, 0), stroke: 1.3pt + primaryColor, name: "vec-(2,3)", mark: (fill: primaryColor, end: ">"),
-        )
-        content("vec-(2,3).end", $(2,3)$, anchor: "west")
-      },
-    );
-  ]
+          //(2,3)
+          line(
+            (0, 0), (2, 3, 0), stroke: 1.3pt + primaryColor, name: "vec-(2,3)", mark: (fill: primaryColor, end: ">"),
+          )
+          content("vec-(2,3).end", $(2,3)$, anchor: "west")
+        },
+      );
+    ]
+  ], [#set align(center);
+#figure(caption: "Representación general de:  " + $v+w$, numbering: none,)[#Center[
+      #cetz.canvas(
+        length: 55pt, {
+          import cetz.draw: *
+
+          set-style(content: (padding: 4pt))
+
+          set-style(mark: (symbol: ">", fill: black))
+          //plano cartesiano
+          line((-1, 0), (2.5, 0), mark: (end: "stealth"))
+          content((), $ " "x $, anchor: "west")
+          set-style(mark: (symbol: none))
+          line((0, 0), (0, 3), mark: (end: "stealth"))
+          content((), $ ""y $, anchor: "west")
+
+          //escala
+          set-style(mark: (symbol: none))
+        
+
+           line(
+             (2.6, 2.5, 0), (0.4, 2, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
+           )
+           line(
+             (2.6, 2.5, 0), (2, 0.5, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
+           )
+
+
+          //sln
+          line((0, 0), (2.6, 2.5, 0), stroke: 1.3pt + primaryColor, name: "vec-(1,4)")
+          circle("vec-(1,4).end", radius: 3pt, fill: primaryColor, stroke: none)
+          content("vec-(1,4).end", $v+w$, anchor: "west")
+
+          //(-1,1)
+          line(
+            (0, 0), (2, 0.5, 0), stroke: 1.3pt + primaryColor, name: "vec-(-1,1)", mark: (fill: primaryColor, end: ">"),
+          )
+          content("vec-(-1,1).end", $w$, anchor: "west")
+
+          //(2,3)
+          line(
+            (0, 0), (0.4, 2, 0), stroke: 1.3pt + primaryColor, name: "vec-(2,3)", mark: (fill: primaryColor, end: ">"),
+          )
+          content("vec-(2,3).end", $v$, anchor: "west")
+        },
+      );
+    ]
 ]
+  ],
+
+
+)
 
 #move(
-  dy: -33%, dx: 8%,
+  dy: -26%, dx: -3%,
 )[
   #box(
-    width: 140pt,
+    width: 130pt,
   )[
     #set align(center);
     #text(
-      size: 11pt,
+      size: 10pt,
     )[
       _Como se puede observar, aparece un paralelogramo en el dibujo de los puntos #underline(stroke: (thickness: 1pt))[involucrados]_
     ]
   ]
 ]
-
-
-
-
-
+#v(-23pt)
+#subtitle[El opuesto de un vector]
