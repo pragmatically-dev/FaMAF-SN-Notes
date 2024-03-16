@@ -448,7 +448,7 @@ Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
 ]
 
 #move(
-  dy: -33%, dx: 76%,
+  dy: -33%, dx: 8%,
 )[
   #box(
     width: 140pt,
