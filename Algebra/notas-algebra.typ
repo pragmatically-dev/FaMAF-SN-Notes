@@ -1,3 +1,5 @@
+#import "@preview/cetz:0.2.1"
+
 #set page(margin: -2pt)
 
 #let primaryColor = rgb("#1288A5");
@@ -338,7 +340,6 @@ vector). La mayoría de nuestros ejemplos tendrán lugar cuanto $n=2 $ o $n=3$;
 para ello usaremos el _sistemas de coordenadas cartesianas_ para representar los
 elementos de $RR^2$ y $RR^3$.
 
-\
 #subtitle[Suma en ℝⁿ:]
 
 Si $(x_1,...,x_n)$, $" " (y_1,...,y_n)$ $in RR$, se define:
@@ -348,8 +349,7 @@ Si $(x_1,...,x_n)$, $" " (y_1,...,y_n)$ $in RR$, se define:
   $
 ]
 En otras palabras, la suma es _coordenada a coordenada_
-\
-\
+
 #subtitle(size: 14pt)[Propiedades:]
 
 #let Center(body) = align(center)[
@@ -359,23 +359,81 @@ En otras palabras, la suma es _coordenada a coordenada_
 
 La suma de vectores en $RR^n$ satisface que:
 
-#align(center)[
+#align(
+  center,
+)[
   #grid(columns: (1fr, 1fr), rows: (60pt, auto), gutter: 0pt, box[
     #align(left)[
-    1. Es asociativa 
-      - $u+(v+w) =(u+v)+w, forall u,v,w in RR^n$
-    2. Es conmutativa
-      - $v+w = w+v, forall v,w in RR^n$
-  ]], box[
+      1. Es asociativa
+        - $u+(v+w) =(u+v)+w, forall u,v,w in RR^n$
+      2. Es conmutativa
+        - $v+w = w+v, forall v,w in RR^n$
+    ]
+  ], box[
     #align(left)[
-    3. El vector $0:=(0,...,0)$, es el _elemento neutro_ 
-      - $v+0=0+v=v, forall v in RR^n$
-    4. El vector $-v = (-x_1,...-x_n)$ es el opuesto de $v=(x_1,...x_n)$
-      - $v+(-v) = (-v)+v=0$
-  ]
+      3. El vector $0:=(0,...,0)$, es el _elemento neutro_
+        - $v+0=0+v=v, forall v in RR^n$
+      4. El vector $-v = (-x_1,...-x_n)$ es el opuesto de $v=(x_1,...x_n)$
+        - $ v+(-v) = (-v)+v=0$
+    ]
   ]);
 
 ]
 
 #pagebreak()
 
+#vspace()
+#title[ Ley del paralelogramo] 
+
+
+Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
+#v(10pt)
+
+
+#figure(caption: "Representación gráfica de:  " + $v+w$,numbering: none)[#Center[
+#cetz.canvas(
+  length: 50pt, {
+    import cetz.draw: *
+
+    set-style(content: (padding: 4pt,))
+
+    set-style(mark: (symbol: ">",fill:black))
+    //plano cartesiano
+    line((-2.5, 0), (2.5, 0), mark: (end: "stealth"))
+    content((), $ " "x $, anchor: "west")
+    set-style(mark: (symbol: none))
+    line((0, 0), (0, 3), mark: (end: "stealth"))
+    content((), $ ""y $, anchor: "west")
+
+    //escala
+    set-style(mark: (symbol: none))
+    for (x, ct) in ((-2, $ -2 $), (-1, $ -1 $), (1, $ 1 $), (2, $ 2 $)) {
+      line((x, 3pt), (x, -3pt))
+      content((), anchor: "north", ct)
+    }
+
+    for (y, ct) in ((1, $ 1 $), (2, $ 2 $)) {
+      line((3pt, y), (-3pt, y))
+      content((), anchor: "east", ct)
+    }
+
+    line((1,4), (2,3,0),stroke:(dash:"dotted",paint:yellow)) 
+    line((1,4), (-1,1,0),stroke:(dash:"dotted",paint:yellow)) 
+
+
+    //sln
+    line((0, 0), (1, 4, 0),angle: 45deg,stroke:1.3pt + primaryColor,name:"vec-(1,4)")
+    circle("vec-(1,4).end",radius: 3pt, fill: primaryColor,stroke: none)
+    content("vec-(1,4).end",$(1,4)$,anchor:"west")
+
+    //(-1,1)
+    line((0, 0), (-1, 1, 0),angle: 45deg,stroke:1.3pt + primaryColor,name:"vec-(-1,1)", mark: (fill:primaryColor,end: ">"))
+    content("vec-(-1,1).end",$(-1,1)$,anchor:"east")
+
+    //(2,3)
+     line((0, 0), (2, 3, 0),angle: 45deg,stroke:1.3pt + primaryColor,name:"vec-(2,3)", mark: (fill:primaryColor,end: ">"))
+    content("vec-(2,3).end",$(2,3)$,anchor:"west")
+  },
+);
+]
+]
