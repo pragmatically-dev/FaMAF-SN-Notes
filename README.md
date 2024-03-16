@@ -2,15 +2,12 @@
 Notas y archivos de la facultad
 
 ## Análisis Matemático:
-* [Repaso y notas de clase](<Analisis Matematico (1 y 2)/Repaso-AM1.pdf>)
- 
-![](<Analisis Matematico (1 y 2)/assets/banner.png>)
+<a href="Analisis Matematico (1 y 2)/Repaso-AM1.pdf"> <img src="https://raw.githubusercontent.com/pragmatically-dev/FaMAF-SN-Notes/main/Analisis%20Matematico%20(1%20y%202)/assets/banner.png"> </a>
+
 
 
 
 
 ## Álgebra Lineal:
-* [Notas de clase](<Algebra/notas-algebra.pdf>)
-
-![](Algebra/assets/banner.png)
+<a href="Algebra/notas-algebra.pdf"> <img src="https://raw.githubusercontent.com/pragmatically-dev/FaMAF-SN-Notes/main/Algebra/assets/banner.png"> </a>
 
