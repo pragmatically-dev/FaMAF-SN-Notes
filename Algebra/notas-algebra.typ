@@ -3,7 +3,7 @@
 #set page(margin: -2pt)
 
 #let primaryColor = rgb("#1288A5");
-#image("assets/banner.png")
+#image("assets/banner.png", width: 100%)
 #counter(page).update(0)
 #pagebreak()
 #set text(font: "Cambria")
@@ -447,56 +447,56 @@ Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
       );
     ]
   ], [#set align(center);
-#figure(caption: "Representación general de:  " + $v+w$, numbering: none,)[#Center[
-      #cetz.canvas(
-        length: 55pt, {
-          import cetz.draw: *
+    #figure(
+      caption: "Representación general de:  " + $v+w$, numbering: none,
+    )[#Center[
+        #cetz.canvas(
+          length: 55pt, {
+            import cetz.draw: *
 
-          set-style(content: (padding: 4pt))
+            set-style(content: (padding: 4pt))
 
-          set-style(mark: (symbol: ">", fill: black))
-          //plano cartesiano
-          line((-1, 0), (2.5, 0), mark: (end: "stealth"))
-          content((), $ " "x $, anchor: "west")
-          set-style(mark: (symbol: none))
-          line((0, 0), (0, 3), mark: (end: "stealth"))
-          content((), $ ""y $, anchor: "west")
+            set-style(mark: (symbol: ">", fill: black))
+            //plano cartesiano
+            line((-1, 0), (2.5, 0), mark: (end: "stealth"))
+            content((), $ " "x $, anchor: "west")
+            set-style(mark: (symbol: none))
+            line((0, 0), (0, 3), mark: (end: "stealth"))
+            content((), $ ""y $, anchor: "west")
 
-          //escala
-          set-style(mark: (symbol: none))
-        
-
-           line(
-             (2.6, 2.5, 0), (0.4, 2, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
-           )
-           line(
-             (2.6, 2.5, 0), (2, 0.5, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
-           )
+            //escala
+            set-style(mark: (symbol: none))
 
 
-          //sln
-          line((0, 0), (2.6, 2.5, 0), stroke: 1.3pt + primaryColor, name: "vec-(1,4)")
-          circle("vec-(1,4).end", radius: 3pt, fill: primaryColor, stroke: none)
-          content("vec-(1,4).end", $v+w$, anchor: "west")
+            line(
+              (2.6, 2.5, 0), (0.4, 2, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
+            )
+            line(
+              (2.6, 2.5, 0), (2, 0.5, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
+            )
 
-          //(-1,1)
-          line(
-            (0, 0), (2, 0.5, 0), stroke: 1.3pt + primaryColor, name: "vec-(-1,1)", mark: (fill: primaryColor, end: ">"),
-          )
-          content("vec-(-1,1).end", $w$, anchor: "west")
 
-          //(2,3)
-          line(
-            (0, 0), (0.4, 2, 0), stroke: 1.3pt + primaryColor, name: "vec-(2,3)", mark: (fill: primaryColor, end: ">"),
-          )
-          content("vec-(2,3).end", $v$, anchor: "west")
-        },
-      );
+            //sln
+            line((0, 0), (2.6, 2.5, 0), stroke: 1.3pt + primaryColor, name: "vec-(1,4)")
+            circle("vec-(1,4).end", radius: 3pt, fill: primaryColor, stroke: none)
+            content("vec-(1,4).end", $v+w$, anchor: "west")
+
+            //(-1,1)
+            line(
+              (0, 0), (2, 0.5, 0), stroke: 1.3pt + primaryColor, name: "vec-(-1,1)", mark: (fill: primaryColor, end: ">"),
+            )
+            content("vec-(-1,1).end", $w$, anchor: "west")
+
+            //(2,3)
+            line(
+              (0, 0), (0.4, 2, 0), stroke: 1.3pt + primaryColor, name: "vec-(2,3)", mark: (fill: primaryColor, end: ">"),
+            )
+            content("vec-(2,3).end", $v$, anchor: "west")
+          },
+        );
+      ]
     ]
-]
   ],
-
-
 )
 
 #move(
@@ -517,40 +517,42 @@ Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
 #subtitle[El opuesto de un vector]
 
 #grid(
-  columns: (2fr, 1fr), rows: (auto, auto), gutter: -51pt, 
-  move(dy: 1%)[ El opuesto de un vector $v$ en el #underline[plano] \ es $-v$ y geometricamente  es el vector \ reflejado respecto al centro.],
-  move(dy:-8%)[
-      #cetz.canvas(
-        length: 30pt, {
-          import cetz.draw: *
+  columns: (2fr, 1fr), rows: (auto, auto), gutter: -51pt, move(
+    dy: 1%,
+  )[ El opuesto de un vector $v$ en el #underline[plano] \ es $-v$ y geometricamente
+    es el vector \ reflejado respecto al centro. ], move(
+    dy: -8%,
+  )[
+    #cetz.canvas(
+      length: 30pt, {
+        import cetz.draw: *
 
-          set-style(content: (padding: 4pt))
+        set-style(content: (padding: 4pt))
 
-          set-style(mark: (symbol: ">", fill: black))
-          //plano cartesiano
-          line((-2.5, 0), (2.5, 0), mark: (end: "stealth"))
-          content((), $ " "x $, anchor: "west")
-          
-          line((0, -2), (0, 3), mark: (end: "stealth"))
-          content((), $ ""y $, anchor: "west")
+        set-style(mark: (symbol: ">", fill: black))
+        //plano cartesiano
+        line((-2.5, 0), (2.5, 0), mark: (end: "stealth"))
+        content((), $ " "x $, anchor: "west")
 
-          //escala
-          set-style(mark: (symbol: none))
-      
-          //(2,3)
-          line(
-            (0, 0), (2, 2, 0), stroke: 1.3pt + primaryColor, name: "vec-(2,2)", mark: (fill: primaryColor, end: ">"),
-          )
-            line(
-            (0, 0), (-2, -2, 0), stroke: 1.3pt + primaryColor, name: "vec-(-2,-2)", mark: (fill: primaryColor, end: ">"),
-          )
-          content("vec-(2,2).end", $v$, anchor: "west")
-          content("vec-(-2,-2).end", $-v$, anchor: "west")
+        line((0, -2), (0, 3), mark: (end: "stealth"))
+        content((), $ ""y $, anchor: "west")
 
-        },
-      );
-    
-  ]
+        //escala
+        set-style(mark: (symbol: none))
+
+        //(2,3)
+        line(
+          (0, 0), (2, 2, 0), stroke: 1.3pt + primaryColor, name: "vec-(2,2)", mark: (fill: primaryColor, end: ">"),
+        )
+        line(
+          (0, 0), (-2, -2, 0), stroke: 1.3pt + primaryColor, name: "vec-(-2,-2)", mark: (fill: primaryColor, end: ">"),
+        )
+        content("vec-(2,2).end", $v$, anchor: "west")
+        content("vec-(-2,-2).end", $-v$, anchor: "west")
+      },
+    );
+
+  ],
 )
 
 #v(-20pt)
@@ -559,58 +561,221 @@ Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
 #subtitle[Resta de vectores]
 
 #grid(
-  columns: (2fr, 1fr), rows: (20%, auto), gutter: -51pt, 
-  [ Dados dos vectores $v,w$ en el plano, podemos representar\ la resta como la suma de $v$ más el opuesto de w, es decir: 
-  #move(dx: 24%)[
-    #set text(size: mathTextSize)
-    $
-      v - w := v +(-w)
-    $]
-  Como $(v-w)+w = v$, la ley del paralelogramo también\ es útil para representar geométricamente la resta
-  ],
-  move(dy:-8%)[
-      #cetz.canvas(
-        length: 30pt, {
-          import cetz.draw: *
+  columns: (2fr, 1fr), rows: (20%, auto), gutter: -51pt, [ Dados dos vectores $v,w$ en el plano, podemos representar\ la resta como la
+    suma de $v$ más el opuesto de w, es decir:
+    #move(dx: 24%)[
+      #set text(size: mathTextSize)
+      $
+        v - w := v +(-w)
+      $
+    ]
+    Como $(v-w)+w = v$, la ley del paralelogramo también\ es útil para representar
+    geométricamente la resta ], move(
+    dy: -8%,
+  )[
+    #cetz.canvas(
+      length: 30pt, {
+        import cetz.draw: *
 
-          set-style(content: (padding: 4pt))
+        set-style(content: (padding: 4pt))
 
-          set-style(mark: (symbol: ">", fill: black))
-          //plano cartesiano
-          line((-2.5, 0), (2.5, 0), mark: (end: "stealth"))
-          content((), $ " "x $, anchor: "west")
-          
-          line((0, -2), (0, 3), mark: (end: "stealth"))
-          content((), $ ""y $, anchor: "west")
-          
-          //escala
-          set-style(mark: (symbol: none))
-      
+        set-style(mark: (symbol: ">", fill: black))
+        //plano cartesiano
+        line((-2.5, 0), (2.5, 0), mark: (end: "stealth"))
+        content((), $ " "x $, anchor: "west")
+
+        line((0, -2), (0, 3), mark: (end: "stealth"))
+        content((), $ ""y $, anchor: "west")
+
+        //escala
+        set-style(mark: (symbol: none))
+
         line(
-            (1, 2), (3, 1, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
-          )
-          line(
-            (1, 2), (-2, 1, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
-          )
-          //(2,3)
-          line(
-            (0, 0), (1, 2, 0), stroke: 1.3pt + primaryColor, name: "vec-(2,2)", mark: (fill: primaryColor, end: ">"),
-          )
-          content("vec-(2,2).end", $v$, anchor: "west")
+          (1, 2), (3, 1, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
+        )
+        line(
+          (1, 2), (-2, 1, 0), stroke: (dash: "dotted", paint: yellow, thickness: 1.6pt),
+        )
+        //(2,3)
+        line(
+          (0, 0), (1, 2, 0), stroke: 1.3pt + primaryColor, name: "vec-(2,2)", mark: (fill: primaryColor, end: ">"),
+        )
+        content("vec-(2,2).end", $v$, anchor: "west")
 
- line(
-            (0, 0), (3, 1, 0), stroke: 1.3pt + primaryColor, name: "vec-(3,1)", mark: (fill: primaryColor, end: ">"),
-          )
-          content("vec-(3,1).end", $w$, anchor: "west")
+        line(
+          (0, 0), (3, 1, 0), stroke: 1.3pt + primaryColor, name: "vec-(3,1)", mark: (fill: primaryColor, end: ">"),
+        )
+        content("vec-(3,1).end", $w$, anchor: "west")
 
 
-            line(
-            (0, 0), (-2, 1, 0), stroke: 1.3pt + primaryColor, name: "vec-(-2,-2)", mark: (fill: primaryColor, end: "o"),
-          )
-          content("vec-(-2,-2).end", $v - w$, anchor: "east")
+        line(
+          (0, 0), (-2, 1, 0), stroke: 1.3pt + primaryColor, name: "vec-(-2,-2)", mark: (fill: primaryColor, end: "o"),
+        )
+        content("vec-(-2,-2).end", $v - w$, anchor: "east")
+      },
+    );
 
-        },
-      );
-    
-  ]
+  ],
 )
+
+#pagebreak()
+
+#vspace()
+#title[ Producto de un vector por un escalar ]
+
+Sea $v=(x_1,...,x_n) in RR^n$ y $lambda in RR$, entonces:
+#mate[
+  $
+    lambda. v = (lambda x_1,...,lambda x_n)
+  $
+]
+
+También denotamos a esta multiplicación por $lambda v$ 
+
+\
+#subtitle(size: 14pt)[Ejemplo:]
+
+Si $v = (1,2)$ y $lambda=1/2$, entonces:
+#grid(
+  columns: (1fr, 1fr), rows: (26%, -14%), [
+    #mate[$
+        lambda v =(1/2 dot 1, 1/2 dot 2) = (1/2,1)
+      $]
+  ], [
+    #move(
+      dy: -30%, dx: 35%,
+    )[#figure(
+        caption: $"Representación de " lambda. v$, numbering: none,
+      )[#Center[
+          #cetz.canvas(
+            length: 50pt, {
+              import cetz.draw: *
+
+              set-style(content: (padding: 4pt))
+              set-style(mark: (fill: black))
+              //plano cartesiano
+              line((0, 0), (2.5, 0), mark: (end: "stealth"))
+              content((), $ " "x $, anchor: "west")
+              set-style(mark: (symbol: none))
+              line((0, 0), (0, 2.5), mark: (end: "stealth"))
+              content((), $ ""y $, anchor: "west")
+
+              //escala
+              set-style(mark: (symbol: none))
+
+              //sln
+              line((0, 0), (1, 2, 0), stroke: 1.3pt + primaryColor, name: "vec-(1,4)")
+              circle("vec-(1,4).end", radius: 3pt, fill: primaryColor, stroke: none)
+              content("vec-(1,4).end", $(1,2)$, anchor: "west")
+
+              line((0, 0), (1 / 2, 1, 0), stroke: 1.3pt + primaryColor, name: "vec-(1,4)")
+              circle("vec-(1,4).end", radius: 3pt, fill: primaryColor, stroke: none)
+              content("vec-(1,4).end", $1/2.(1,2)$, anchor: "west")
+            },
+          );
+        ]
+      ]]
+  ],
+)
+ 
+
+#subtitle[Propiedades]
+
+La multiplicación por escalares satisface que:
+
+#pad(
+  top: 7pt,
+)[#grid(
+    columns: (1fr, 1fr), rows: (auto, auto), [
+      1. Es asociativa:
+      #mate[$
+          (lambda mu)v = lambda(mu v), " "forall v in RR^n,lambda, mu in RR
+        $]
+    ], [
+      2. Es distributiva:
+      #mate[$
+          lambda(v+w)    &=lambda v + lambda w," " forall v,w in RR^n , lambda in RR \
+          (lambda + mu)v &= lambda v + mu v," " forall v in RR^n , lambda,mu in RR
+        $]
+    ], [
+      3. Existencia del opuesto:
+      #mate[
+        $
+          (-1)v =-v , " "forall v in RR^n
+        $
+      ]
+    ],
+  )
+]
+
+\
+
+A continuación se introducirá un concepto #underline[_fundamental_] para los
+temas sub-siguientes:
+
+\
+
+#subtitle[Combinación Lineal]
+
+Sean $v_1,...,v_k$ vectores en $RR^n$
+
+Una _combinación lineal_ de $v_1,...,v_k$ es un #underline[vector] de la forma
+#mate[$
+    lambda_1 v_1 +...+ lambda_k v_k
+  $]
+
+donde $lambda_1,...,lambda_k$ son números reales.
+
+#pagebreak()
+#vspace()
+#subtitle(size: 14pt)[Ejemplo:]
+
+Sean $v_1=(1,2,3),v_2=(-1,3,0),v_3=(-1,0,1)" " y " " v_4=(-2,-1,-3)$ vectores en $RR^3$
+
+Entonces:
+#mate[
+  $
+    v &= 2v_1 -3v_2 +4v_3 -5v_4 \
+      &= 2(1,2,3) - 3(-1,3,0) + 4(-1,0,1) -5(-2,-1,-3) \
+      &= (2,4,6)+(3,-9,0)+(-4,0,4)+(10,5,15) \
+      &= (11,0,25)
+  $
+]
+
+Es una combinación lineal de $v_1,v_2,v_3,v_4$.
+
+
+#subtitle[Base canónica]
+
+Dado $i in {1,...,n}$, se denota $e_i in RR^n$ al vector cuyas coordenadas son
+todas $0$ excepto la coordenada _i-ésima_ que es $1$.
+
+#mate[$
+    e_i = (0,...,1,...,0)
+  $]
+
+El conjunto ${e_1,...,e_n}$ se llama _base canónica_ de $RR^n$.
+
+#v(10pt)
+#subtitle(size: 14pt)[Ejemplo:]
+
+En $RR^3$ los vectores son $e_1=(1,0,0),e_2=(0,1,0),e_3=(0,0,1)$, estos vectores
+son fundamentales para la materia.
+
+\
+#subtitle[Propiedad]
+
+Todo vector de $RR^n$ se escribe como _combinación lineal_ de la #underline[base canónica].
+#mate[$(x_1,...,x_n)= x_1e_1 + x_2e_2+...+x_n e_n$]
+
+\
+
+#subtitle(size: 14pt)[Ejemplo:]
+
+#mate[
+  $
+    (1,2,3) &= (1,0,0) + (0,2,0)+(0,0,3) \
+            &= 1(1,0,0)+2(0,1,0)+3(0,0,1) \
+            &= 1 e_1 + 2 e_2 + 3 e_3
+  $
+]
