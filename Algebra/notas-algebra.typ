@@ -316,11 +316,11 @@ tambíen suele usarse la notación $(x_1,x_2,x_3)$
     columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, figure(
       caption: "(a) \n Representación de puntos en el plano", numbering: none,
     )[
-      #image("assets/ejemplo-pto-plano.svg", height: 180pt)
+      #image("assets/ejemplo-pto-plano.svg", height: 170pt)
     ], figure(
       caption: "(b) \n Representación de puntos en el espacio", numbering: none,
     )[
-      #image("assets/ejemplo-pto-espacio.svg", height: 180pt)
+      #image("assets/ejemplo-pto-espacio.svg", height: 170pt)
     ],
   );
 
@@ -620,7 +620,7 @@ Sea $v = (2,3)$ y $w=(-1,1)$, entonces $v+w=(1,4)$
 
 #pagebreak()
 
-#vspace()
+#v(8pt)
 #title[ Producto de un vector por un escalar ]
 
 Sea $v=(x_1,...,x_n) in RR^n$ y $lambda in RR$, entonces:
