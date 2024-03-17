@@ -671,7 +671,7 @@ Si $v = (1,2)$ y $lambda=1/2$, entonces:
               content("vec-(1,4).end", $(1,2)$, anchor: "west")
 
               line((0, 0), (1 / 2, 1, 0), stroke: 1.3pt + primaryColor, name: "vec-(1,4)")
-              circle("vec-(1,4).end", radius: 3pt, fill: primaryColor, stroke: none)
+              circle("vec-(1,4).end", radius: 3pt, fill: yellow, stroke: 0.3pt)
               content("vec-(1,4).end", $1/2.(1,2)$, anchor: "west")
             },
           );
