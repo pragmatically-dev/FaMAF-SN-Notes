@@ -1,5 +1,11 @@
 # FaMAF-SN-Notes
+
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/pragmatically-dev/FaMAF-SN-Notes)  
+
 Notas y archivos de la facultad
+
+
 
 |        Álgebra Lineal        |         Análisis Matemático           |
 |--------------------|--------------------|
