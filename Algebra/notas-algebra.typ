@@ -721,7 +721,6 @@ A continuación se introducirá un concepto #underline[_fundamental_] para los
 temas sub-siguientes:
 
 \
-
 #subtitle[Combinación Lineal]
 
 Sean $v_1,...,v_k$ vectores en $RR^n$
@@ -789,4 +788,5 @@ Todo vector de $RR^n$ se escribe como _combinación lineal_ de la #underline[bas
 
 
 #pagebreak()
+
 
