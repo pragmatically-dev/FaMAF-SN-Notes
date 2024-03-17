@@ -633,7 +633,9 @@ Sea $v=(x_1,...,x_n) in RR^n$ y $lambda in RR$, entonces:
 También denotamos a esta multiplicación por $lambda v$ 
 
 \
-#subtitle(size: 14pt)[Ejemplo:]
+#subtitle(size:15pt)[Ejemplo:]
+
+#v(9pt)
 
 Si $v = (1,2)$ y $lambda=1/2$, entonces:
 #grid(
@@ -728,7 +730,7 @@ donde $lambda_1,...,lambda_k$ son números reales.
 
 #pagebreak()
 #vspace()
-#subtitle(size: 14pt)[Ejemplo:]
+#subtitle(size:15pt)[Ejemplo:]
 
 Sean $v_1=(1,2,3),v_2=(-1,3,0),v_3=(-1,0,1)" " y " " v_4=(-2,-1,-3)$ vectores en $RR^3$
 
@@ -757,7 +759,7 @@ todas $0$ excepto la coordenada _i-ésima_ que es $1$.
 El conjunto ${e_1,...,e_n}$ se llama _base canónica_ de $RR^n$.
 
 #v(10pt)
-#subtitle(size: 14pt)[Ejemplo:]
+#subtitle(size:15pt)[Ejemplo:]
 
 En $RR^3$ los vectores son $e_1=(1,0,0),e_2=(0,1,0),e_3=(0,0,1)$, estos vectores
 son fundamentales para la materia.
