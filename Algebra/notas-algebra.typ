@@ -639,7 +639,7 @@ También denotamos a esta multiplicación por $lambda v$
 
 Si $v = (1,2)$ y $lambda=1/2$, entonces:
 #grid(
-  columns: (1fr, 1fr), rows: (26%, -14%), [
+  columns: (1fr, 1fr), rows: (26%, -24%), [
     #mate[$
         lambda v =(1/2 dot 1, 1/2 dot 2) = (1/2,1)
       $]
@@ -679,7 +679,12 @@ Si $v = (1,2)$ y $lambda=1/2$, entonces:
       ]]
   ],
 )
- 
+ #move(dx: 86%,dy: -13%)[
+ #box(width: 89pt)[#text(size:8pt)[
+  #set align(center)
+  _Como se puede observar, al multiplicar un vector por un escalar, como su nombre indica, este extiende o escala el vector original_
+ ]]]
+
 
 #subtitle[Propiedades]
 
@@ -781,3 +786,7 @@ Todo vector de $RR^n$ se escribe como _combinación lineal_ de la #underline[bas
             &= 1 e_1 + 2 e_2 + 3 e_3
   $
 ]
+
+
+#pagebreak()
+
