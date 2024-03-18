@@ -1,7 +1,7 @@
 #set page(margin: -2pt)
 
 #let primaryColor = rgb("#1288A5");
-#image("assets/banner.png")
+#image("assets/banner.png",width: 100%)
 #counter(page).update(0)
 #pagebreak()
 #set text(font: "Cambria")
@@ -627,6 +627,25 @@ Tomemos la función $f(x)= cos(x) - 2x$ y tomamos el intervalo $[0,pi/2]$
     ],
   )
 ]
+
+ \
+#subtitle(true)[Definición:]
+
+Sea $m$ las pendientes secantes que pasan por el punto $a$:
+
+#v(12pt)
+
+$
+  m= underbrace((f(x) - f(a))/(x-a),"Cociente incremental") = (#sym.triangle.t f)/(#sym.triangle.t x)
+$
+
+y la pendiente en si de la recta tangente se define:
+
+$
+  lim_(x->a) (f(x) - f(a))/(x-a)
+$
+
+
 
 
 
