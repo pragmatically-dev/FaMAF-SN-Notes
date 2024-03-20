@@ -1,7 +1,7 @@
 #set page(margin: -2pt)
 
 #let primaryColor = rgb("#1288A5");
-#image("assets/banner.png",width: 100%)
+#image("assets/banner.png", width: 100%)
 #counter(page).update(0)
 #pagebreak()
 #set text(font: "Cambria")
@@ -15,16 +15,16 @@
     _Santiago Emanuel Nieva_
   ], numbering: "1", footer: [
     #pad(bottom: -19pt)[#align(center)[
-      #square(size: 30pt, fill: rgb("#1288A5"))[
+        #square(size: 30pt, fill: rgb("#1288A5"))[
 
-        #pad(4.5pt)[
-          #text(fill: white, weight: "bold", size: 10pt)[
-            #counter(page).display()
+          #pad(4.5pt)[
+            #text(fill: white, weight: "bold", size: 10pt)[
+              #counter(page).display()
+            ]
+
           ]
-
         ]
-      ]
-    ]]
+      ]]
   ],
 )
 
@@ -173,8 +173,7 @@
             #v(3pt)
 
             #underline[ Si alguno de estas condiciones no se cumpliese: ]
-              #set text(13pt);
-              
+            #set text(13pt);
 
             - Diremos que $f$ es #underline[discontinua] en $a$
               #v(20pt)
@@ -265,7 +264,7 @@
     #recuadro(title: text(
       white, size: 11pt, baseline: 8pt, weight: "regular",
     )[Continuidad por Izquierda], title-width: 56%, height: 100%, body: [
-      
+
       #set text(15pt)
       - Una funcion $f$ es continua por izquierda en un valor $a$ si:
       #align(center)[
@@ -281,7 +280,7 @@
       title: text(
         white, size: 11pt, baseline: 8pt, weight: "regular",
       )[Continuidad por Derecha], title-width: 56%, height: 18%, title-direction: "right", body: [
-      #set text(size: 15pt)
+        #set text(size: 15pt)
         - Una funcion $f$ es continua por derecha en un valor $a$ si:
         #align(center)[
           #set text(size: 16pt)
@@ -320,7 +319,7 @@
       )[- Una funcion $f$ es continua en un intervalo abierto $[a,b]$ si:]
       #pad(left: 4%, top: 13%)[
         #set align(left)
-      #set text(size: 15pt)
+        #set text(size: 15pt)
         1. Es continua en todo número del intervalo abierto $(a,b)$
         2. Es continua por #underline[derecha] en $a$
         3. Es continua por #underline[izquierda] en $b$
@@ -347,7 +346,7 @@
         #set align(left)
         #grid(
           columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 30%)[
-      #set text(size: 15pt)
+            #set text(size: 15pt)
 
             #set par(leading: 0.8em)
             1. $(f + g)(x)$
@@ -355,7 +354,7 @@
             3. $c dot f(x), "siendo " c "constante."$
           ], box[
             #set par(leading: 0.9em)
-      #set text(size: 15pt)
+            #set text(size: 15pt)
 
             4. $(f/g)(x)$ _, si_ $g(a) != 0$
             5. $(f circle.small g)(x),$_si $f$ es continua en $g(a)$_
@@ -467,7 +466,7 @@ $
       - Si $f$ es continua en el intervalo cerrado $[a,b]$, y $N$ es un número
         estrictamente situado entre $f(a)$ y $f(b)$, entonces existe un número $c in (a,b)$ tal
         que $f(c)=N$
-     
+
       #underline(offset: 8pt, evade: false)[$f$ continua en [a,b]:]
 
       #align(center)[
@@ -512,7 +511,7 @@ Tomemos la función $f(x)= cos(x) - 2x$ y tomamos el intervalo $[0,pi/2]$
 #pad(
   left: 10%,
 )[
-  
+
   - $f(x)$ es continua en $[0,pi/2]$ debido a que tenemos una suma de funciones
     continuas
 
@@ -595,7 +594,7 @@ Tomemos la función $f(x)= cos(x) - 2x$ y tomamos el intervalo $[0,pi/2]$
 
 #pagebreak()
 
-\
+#v(15pt)
 #underline[#title[2. Derivadas:]]
 
 #align(
@@ -604,7 +603,7 @@ Tomemos la función $f(x)= cos(x) - 2x$ y tomamos el intervalo $[0,pi/2]$
   #recuadro(
     title: text(
       white, size: 16pt, baseline: 4pt, weight: "regular",
-    )[Información acerca de $f(x)$], title-width: 50%, height: 47%, title-direction: "left", width: 90%, body: [
+    )[Información acerca de $f(x)$], title-width: 50%, height: 44%, title-direction: "left", width: 90%, body: [
       #set text(size: 16pt);
       #pad(
         10pt, left: 12%,
@@ -628,24 +627,147 @@ Tomemos la función $f(x)= cos(x) - 2x$ y tomamos el intervalo $[0,pi/2]$
   )
 ]
 
- \
-#subtitle(true)[Definición:]
+#subtitle(true)[Introducción:]
 
 Sea $m$ las pendientes secantes que pasan por el punto $a$:
 
-#v(12pt)
-
-$
-  m= underbrace((f(x) - f(a))/(x-a),"Cociente incremental") = (#sym.triangle.t f)/(#sym.triangle.t x)
-$
-
+#text(
+  size: 14pt,
+)[$
+    m= underbrace((f(x) - f(a))/(x-a), "Cociente incremental") = (#sym.triangle.t f)/(#sym.triangle.t x)
+  $
+]
 y la pendiente en si de la recta tangente se define:
 
-$
-  lim_(x->a) (f(x) - f(a))/(x-a)
-$
+#text(
+  size: 14pt,
+)[$
+    lim_(x->a) (f(x) - f(a))/(x-a) underbrace(" " = " ", x = a+h) lim_(h->0)(f(a+h) - f(a))/h
+  $]
+#recuadro(
+  title: text(
+    white, size: 15pt, baseline: 7pt, weight: "regular",
+  )[Definición formal de la derivada], title-width: 50%, height: 17%, title-direction: "left", width: 100%, body: [
+
+    Sea $a$ un número en el dominio de $f$, la derivada de la función $f$ en $a$ es
+    la #underline[pendiente] de la recta #underline[tangente] a la función en ese
+    punto
+    $
+      (d f)/(d x) = f'(a) = lim_(h->0)(f(a+h) - f(a))/(h)
+    $
+
+  ],
+)
+
+#pagebreak()
+
+#v(10pt)
+
+#recuadro(
+  title: text(white, size: 15pt, baseline: 7pt, weight: "regular")[Observación], title-width: 20%, height: 10%, title-direction: "left", width: 100%, body: [
+
+    #align(
+      center,
+    )[
+      #v(4pt)
+      Si $" "exists lim_(h->0)(f(a+h)-f(a))/h$ entonces decimos que $f$ es _diferenciable_ en $a$
+    ]
+  ],
+)
+
+#recuadro(
+  title: text(white, size: 15pt, baseline: 7pt, weight: "regular")[Teorema], title-width: 20%, height: 13%, title-direction: "left", width: 100%, body: [
+
+    #align(
+      center,
+    )[Si $f$ es _diferenciable_ en $a$ entonces $f$ es #underline[continua] en $a$. ]
+    #v(14pt)
+    #text(
+      size: 13pt,
+    )[ - Hay que tener en cuenta que no vale la recíproca del teorema ]
+  ],
+)
+
+#text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Derivadas laterales:]]
+#grid(
+  columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, block(
+    width: 100%, height: 27%,
+  )[
+    #recuadro(
+      title: text(
+        white, size: 11pt, baseline: 8pt, weight: "regular",
+      )[Derivada por Izquierda], title-width: 56%, height: 100%, body: [
+
+        #set text(15pt)
+        - Si nos acercamos al punto $a$ con valores negativos de $h$, es decir:
+        $
+          (a+h)<a,
+        $
+        Entonces:
+        #align(center)[
+          #set text(size: 16pt)
+          $
+            f'^- =lim_(h->0^-)(f(a+h) -f(a) )/h
+          $
+        ]
+      ],
+    ),
+
+  ], [
+    #recuadro(
+      title: text(
+        white, size: 11pt, baseline: 8pt, weight: "regular",
+      )[Derivada por Derecha], title-width: 56%, height: 27%, title-direction: "right", body: [
+        #set text(15pt)
+        - Si nos acercamos al punto $a$ con valores positivos de $h$, es decir:
+        $
+          (a+h)>a,
+        $
+        Entonces:
+        #align(center)[
+          #set text(size: 16pt)
+          $
+            f'^+ =lim_(h->0^+)(f(a+h) -f(a) )/h
+          $
+        ]
+      ],
+    )
+
+  ],
+)
+
+#align(
+  center,
+)[#recuadro(
+    title: text(white, size: 14pt, baseline: 7pt, weight: "regular")[Observación], title-width: 100%, height: 8%, title-direction: "left", width: 50%, body: [
+
+      #align(center)[
+        #v(-10%)
+        $exists f'(x) <=> f'^-(x) = f'^+(x)$
+      ]
+    ],
+  )
+
+]
+#pagebreak()
 
 
+
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(
+      white, size: 16pt, baseline: 8pt, weight: "regular",
+    )[Ejemplo gráfico: La derivada], title-width: 55%, height: 50%, title-direction: "left", body: [
+      #set align(center)
+      #pad(top: -16pt, left: 40pt)[
+        #image("assets/Derivada.svg",fit:"stretch",width: 
+        540pt,height: 350pt)
+      ]
+    ],
+  )
+]
 
 
 
