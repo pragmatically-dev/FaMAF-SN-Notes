@@ -232,6 +232,9 @@
     alignAux = right
   }
 
+  if title-direction == "center" {
+    dir = (bottom-right: 0pt, top-left: 7pt, top-right:7pt)
+  }
   box(
     width: width, height: height, stroke: 1.9pt + primaryColor, radius: radius,
   )[
@@ -739,7 +742,7 @@ y la pendiente en si de la recta tangente se define:
 #align(
   center,
 )[#recuadro(
-    title: text(white, size: 14pt, baseline: 7pt, weight: "regular")[Observación], title-width: 100%, height: 8%, title-direction: "left", width: 50%, body: [
+    title: text(white, size: 14pt, baseline: 7pt, weight: "regular")[Observación], title-width: 100%, height: 8%, title-direction: "center", width: 50%, body: [
 
       #align(center)[
         #v(-10%)
@@ -869,10 +872,15 @@ $
   f'(f^(-1)(x)) dot (f^(-1)(x))' &= 1 \
   
 $
-#v(20pt)
-#align(center)[#recuadro(title:text(white, size: 16pt, baseline: 7pt, weight: "regular")[Despejamos finalmente],width:60%,height:10%,title-width:66%, body:[
-  
-  #move(dx: 70pt,dy: -7pt)[$
+#v(15pt)
+#align(center)[#recuadro(title:text(white, size: 16pt, baseline: 7pt, weight: "regular")[Despejamos finalmente],width:60%,height:10%,title-width:100%, title-direction:"center",body:[
+  #set text(size: 16pt)
+  #move(dx: 70pt,dy: -8pt)[$
     (f^(-1)(x))'
 = 1/(f'(f^(-1)(x)))  $
 ]])]
+
+
+
+
+
