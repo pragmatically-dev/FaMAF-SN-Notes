@@ -774,7 +774,7 @@ y la pendiente en si de la recta tangente se define:
   dx: 16pt, dy: 10pt,
 )[#grid(
     columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 15%)[
-      #set text(size: 15pt)
+      #set text(size: 13pt)
       #set par(leading: 1.2em)
 
       - $(c)' = 0, forall c in RR$
@@ -786,7 +786,7 @@ y la pendiente en si de la recta tangente se define:
     
     ], box[
       #set par(leading: 1.2em)
-      #set text(size: 15pt)
+      #set text(size: 13pt)
       - $(c dot f)'(x) = c dot f'(x), forall c in RR $
       - $(f/g)'(x)  = ( f'(x)g(x) - f(x)g'(x) )/(g(x)^2)$, #text(size:10pt,weight: "extrabold")[$forall$ $g$(x) $!=$ 0]
       - _Si _ $f(x)=x^r => f'(x) = r dot x^(r-1)$
@@ -803,7 +803,7 @@ y la pendiente en si de la recta tangente se define:
   dx: 16pt, dy: 3pt,
 )[#grid(
     columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 14%)[
-      #set text(size: 15pt)
+      #set text(size: 13pt)
       #set par(leading: 1em)
 
     - $(e^g(x))'(x) = g'(x) dot e^g(x) $
@@ -814,7 +814,7 @@ y la pendiente en si de la recta tangente se define:
   
     ], box[
       #set par(leading: 1em)
-      #set text(size: 15pt)
+      #set text(size: 13pt)
       - $(e^x)' =e^x$
       - $(log_a(x))'(x) = 1/(ln(a) dot x), a>0 and x>0$
       - $ (sin g(x))' = g'(x) dot cos(g(x)) $
@@ -838,7 +838,15 @@ Antes de continuar con la derivada de la función inversa, primero quiero hacer 
 
 #align(center)[
   #image("assets/def.funcion.png",height: 60%,fit: "stretch",width: 110%)
+  
+
 ]
-#align(center)[
-  #image("assets/in-bi-sur.png",height: 24%,fit: "stretch",width: 110%)
+#pad(left: -20pt,top: -10pt)[
+#grid(
+    columns: (0.2fr,0.2fr,0.2fr), rows: (25%, auto), gutter: 0pt, 
+    image("assets/inyectiva.png",width: 110%),
+    image("assets/sobreyectiva.png",fit: "stretch",width: 100%, height: 101%),
+    image("assets/biyectiva.png",fit: "stretch",width: 110%,height: 100%)
+
+  )
 ]
