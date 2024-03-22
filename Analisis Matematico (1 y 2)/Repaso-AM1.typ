@@ -827,6 +827,7 @@ y la pendiente en si de la recta tangente se define:
 
 #pagebreak()
 
+
 #v(15pt)
 
 #text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Derivada de la función inversa:]]
@@ -836,8 +837,8 @@ y la pendiente en si de la recta tangente se define:
 Antes de continuar con la derivada de la función inversa, primero quiero hacer un breve repaso de los conceptos básicos relevantes para entender este tema.
 
 #align(center)[
-  #image("assets/def.funcion.png",height: 60%,fit: "contain")
+  #image("assets/def.funcion.png",height: 60%,fit: "stretch",width: 110%)
 ]
 #align(center)[
-  #image("assets/in-bi-sur.png",height: 24%,fit: "contain")
+  #image("assets/in-bi-sur.png",height: 24%,fit: "stretch",width: 110%)
 ]
