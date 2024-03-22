@@ -850,3 +850,29 @@ Antes de continuar con la derivada de la función inversa, primero quiero hacer 
 
   )
 ]
+
+#pagebreak()
+
+#v(15pt)
+
+#text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Función inversa:]]
+
+#align(center)[
+  #image("assets/fn-inversa.png")
+]
+
+#subtitle(true)[Derivada de la función inversa:]
+
+$
+  f(f^(-1)(x)) &= x \
+  [f(f^(-1)(x))]' &= (x)' \
+  f'(f^(-1)(x)) dot (f^(-1)(x))' &= 1 \
+  
+$
+#v(20pt)
+#align(center)[#recuadro(title:text(white, size: 16pt, baseline: 7pt, weight: "regular")[Despejamos finalmente],width:60%,height:10%,title-width:66%, body:[
+  
+  #move(dx: 70pt,dy: -7pt)[$
+    (f^(-1)(x))'
+= 1/(f'(f^(-1)(x)))  $
+]])]
