@@ -233,7 +233,7 @@
   }
 
   if title-direction == "center" {
-    dir = (bottom-right: 0pt, top-left: 7pt, top-right:7pt)
+    dir = (bottom-right: 0pt, top-left: 7pt, top-right: 7pt)
   }
   box(
     width: width, height: height, stroke: 1.9pt + primaryColor, radius: radius,
@@ -785,36 +785,34 @@ y la pendiente en si de la recta tangente se define:
       - $(f dot g)'(x) = f'(x)g(x) + f(x)g'(x)$
       - $(a x + b)'(x) = a$
       - $(1/g(x))'(x)= -(g'(x))/(g(x)^2)$
-      
-    
+
     ], box[
       #set par(leading: 1.2em)
       #set text(size: 13pt)
       - $(c dot f)'(x) = c dot f'(x), forall c in RR $
-      - $(f/g)'(x)  = ( f'(x)g(x) - f(x)g'(x) )/(g(x)^2)$, #text(size:10pt,weight: "extrabold")[$forall$ $g$(x) $!=$ 0]
-      - _Si _ $f(x)=x^r => f'(x) = r dot x^(r-1)$
-      - $underbrace((f circle.small g)'(x) = f'(g(x)) dot g'(x),"Regla de la cadena")$
+      - $(f/g)'(x) = ( f'(x)g(x) - f(x)g'(x) )/(g(x)^2)$, #text(size: 10pt, weight: "extrabold")[$forall$ $g$(x) $!=$ 0]
+      - _Si_ $f(x)=x^r => f'(x) = r dot x^(r-1)$
+      - $underbrace((f circle.small g)'(x) = f'(g(x)) dot g'(x), "Regla de la cadena")$
       - $(sqrt(g(x)))'(x) = (g'(x))/(2sqrt(g(x)))$
-     
 
     ],
   )]
 
 #text(primaryColor, size: 20pt)[#sym.square.filled ] #underline[#subtitle(true)[Derivadas trigonométricas, logarítmicas y exponenciales:]]
 
-      #move(
+#move(
   dx: 16pt, dy: 3pt,
 )[#grid(
     columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 14%)[
       #set text(size: 13pt)
       #set par(leading: 1em)
 
-    - $(e^g(x))'(x) = g'(x) dot e^g(x) $
-    - $(ln g(x))'(x) = (g'(x)) / (g(x)) $
-    - $ (x^(g(x)))'(x)= (e^(g(x) dot ln x))'$
-    - $(a^x)'(x) = ln (a) dot a^x ,a>0$ 
-    - $(ln x)'(x) = 1/x, x > 0$
-  
+      - $(e^g(x))'(x) = g'(x) dot e^g(x) $
+      - $(ln g(x))'(x) = (g'(x)) / (g(x)) $
+      - $ (x^(g(x)))'(x)= (e^(g(x) dot ln x))'$
+      - $(a^x)'(x) = ln (a) dot a^x ,a>0$
+      - $(ln x)'(x) = 1/x, x > 0$
+
     ], box[
       #set par(leading: 1em)
       #set text(size: 13pt)
@@ -822,35 +820,32 @@ y la pendiente en si de la recta tangente se define:
       - $(log_a(x))'(x) = 1/(ln(a) dot x), a>0 and x>0$
       - $ (sin g(x))' = g'(x) dot cos(g(x)) $
       - $ (cos g(x))' = - g'(x) dot sin(g(x)) $
-     
 
     ],
   )]
 
-
 #pagebreak()
-
 
 #v(15pt)
 
 #text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Derivada de la función inversa:]]
 
-#set text(size:15pt)
+#set text(size: 15pt)
 
-Antes de continuar con la derivada de la función inversa, primero quiero hacer un breve repaso de los conceptos básicos relevantes para entender este tema.
+Antes de continuar con la derivada de la función inversa, primero quiero hacer
+un breve repaso de los conceptos básicos relevantes para entender este tema.
 
-#align(center)[
-  #image("assets/def.funcion.png",height: 60%,fit: "stretch",width: 110%)
-  
+#align(
+  center,
+)[
+  #image("assets/def.funcion.png", height: 60%, fit: "stretch", width: 110%)
 
 ]
-#pad(left: -20pt,top: -10pt)[
-#grid(
-    columns: (0.2fr,0.2fr,0.2fr), rows: (25%, auto), gutter: 0pt, 
-    image("assets/inyectiva.png",width: 110%),
-    image("assets/sobreyectiva.png",fit: "stretch",width: 100%, height: 101%),
-    image("assets/biyectiva.png",fit: "stretch",width: 110%,height: 100%)
-
+#pad(
+  left: -20pt, top: -10pt,
+)[
+  #grid(
+    columns: (0.2fr, 0.2fr, 0.2fr), rows: (25%, auto), gutter: 0pt, image("assets/inyectiva.png", width: 110%), image("assets/sobreyectiva.png", fit: "stretch", width: 100%, height: 101%), image("assets/biyectiva.png", fit: "stretch", width: 110%, height: 100%),
   )
 ]
 
@@ -867,20 +862,23 @@ Antes de continuar con la derivada de la función inversa, primero quiero hacer 
 #subtitle(true)[Derivada de la función inversa:]
 
 $
-  f(f^(-1)(x)) &= x \
-  [f(f^(-1)(x))]' &= (x)' \
+  f(f^(-1)(x))                   &= x \
+  [f(f^(-1)(x))]'                &= (x)' \
   f'(f^(-1)(x)) dot (f^(-1)(x))' &= 1 \
-  
 $
 #v(15pt)
-#align(center)[#recuadro(title:text(white, size: 16pt, baseline: 7pt, weight: "regular")[Despejamos finalmente],width:60%,height:10%,title-width:100%, title-direction:"center",body:[
-  #set text(size: 16pt)
-  #move(dx: 70pt,dy: -8pt)[$
-    (f^(-1)(x))'
-= 1/(f'(f^(-1)(x)))  $
-]])]
-
-
-
-
+#align(
+  center,
+)[#recuadro(
+    title: text(
+      white, size: 16pt, baseline: 7pt, weight: "regular",
+    )[Despejamos finalmente], width: 60%, height: 10%, title-width: 100%, title-direction: "center", body: [
+      #set text(size: 16pt)
+      #move(dx: 70pt, dy: -8pt)[$
+          (f^(-1)(x))'
+          = 1/(f'(f^(-1)(x)))
+        $
+      ]
+    ],
+  )]
 
