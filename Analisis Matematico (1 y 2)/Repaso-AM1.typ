@@ -595,7 +595,7 @@ Tomemos la función $f(x)= cos(x) - 2x$ y tomamos el intervalo $[0,pi/2]$
 #pagebreak()
 
 #v(15pt)
-#underline[#title[2. Derivadas:]]
+#underline[#title[2. Derivación:]]
 
 #align(
   center,
@@ -751,8 +751,6 @@ y la pendiente en si de la recta tangente se define:
 ]
 #pagebreak()
 
-
-
 #align(
   center,
 )[
@@ -761,13 +759,85 @@ y la pendiente en si de la recta tangente se define:
       white, size: 16pt, baseline: 8pt, weight: "regular",
     )[Ejemplo gráfico: La derivada], title-width: 55%, height: 50%, title-direction: "left", body: [
       #set align(center)
-      #pad(top: -16pt, left: 40pt)[
-        #image("assets/Derivada.svg",fit:"stretch",width: 
-        540pt,height: 350pt)
+      #pad(
+        top: -16pt, left: 40pt,
+      )[
+        #image("assets/Derivada.svg", fit: "stretch", width: 540pt, height: 350pt)
       ]
     ],
   )
 ]
 
+#text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Propiedades y Reglas de Derivación:]]
+
+#move(
+  dx: 16pt, dy: 10pt,
+)[#grid(
+    columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 15%)[
+      #set text(size: 15pt)
+      #set par(leading: 1.2em)
+
+      - $(c)' = 0, forall c in RR$
+      - $(f + g)'(x) = f'(x) + g'(x)$
+      - $(f dot g)'(x) = f'(x)g(x) + f(x)g'(x)$
+      - $(a x + b)'(x) = a$
+      - $(1/g(x))'(x)= -(g'(x))/(g(x)^2)$
+      
+    
+    ], box[
+      #set par(leading: 1.2em)
+      #set text(size: 15pt)
+      - $(c dot f)'(x) = c dot f'(x), forall c in RR $
+      - $(f/g)'(x)  = ( f'(x)g(x) - f(x)g'(x) )/(g(x)^2)$, #text(size:10pt,weight: "extrabold")[$forall$ $g$(x) $!=$ 0]
+      - _Si _ $f(x)=x^r => f'(x) = r dot x^(r-1)$
+      - $underbrace((f circle.small g)'(x) = f'(g(x)) dot g'(x),"Regla de la cadena")$
+      - $(sqrt(g(x)))'(x) = (g'(x))/(2sqrt(g(x)))$
+     
+
+    ],
+  )]
+
+#text(primaryColor, size: 20pt)[#sym.square.filled ] #underline[#subtitle(true)[Derivadas trigonométricas, logarítmicas y exponenciales:]]
+
+      #move(
+  dx: 16pt, dy: 3pt,
+)[#grid(
+    columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 14%)[
+      #set text(size: 15pt)
+      #set par(leading: 1em)
+
+    - $(e^g(x))'(x) = g'(x) dot e^g(x) $
+    - $(ln g(x))'(x) = (g'(x)) / (g(x)) $
+    - $ (x^(g(x)))'(x)= (e^(g(x) dot ln x))'$
+    - $(a^x)'(x) = ln (a) dot a^x ,a>0$ 
+    - $(ln x)'(x) = 1/x, x > 0$
+  
+    ], box[
+      #set par(leading: 1em)
+      #set text(size: 15pt)
+      - $(e^x)' =e^x$
+      - $(log_a(x))'(x) = 1/(ln(a) dot x), a>0 and x>0$
+      - $ (sin g(x))' = g'(x) dot cos(g(x)) $
+      - $ (cos g(x))' = - g'(x) dot sin(g(x)) $
+     
+
+    ],
+  )]
 
 
+#pagebreak()
+
+#v(15pt)
+
+#text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Derivada de la función inversa:]]
+
+#set text(size:15pt)
+
+Antes de continuar con la derivada de la función inversa, primero quiero hacer un breve repaso de los conceptos básicos relevantes para entender este tema.
+
+#align(center)[
+  #image("assets/def.funcion.png",height: 60%,fit: "contain")
+]
+#align(center)[
+  #image("assets/in-bi-sur.png",height: 24%,fit: "contain")
+]

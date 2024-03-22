@@ -789,4 +789,3 @@ Todo vector de $RR^n$ se escribe como _combinación lineal_ de la #underline[bas
 
 #pagebreak()
 
-
