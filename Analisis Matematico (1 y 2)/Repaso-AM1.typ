@@ -820,7 +820,7 @@ y la pendiente en si de la recta tangente se define:
       - $(log_a(x))'(x) = 1/(ln(a) dot x), a>0 and x>0$
       - $ (sin g(x))' = g'(x) dot cos(g(x)) $
       - $ (cos g(x))' = - g'(x) dot sin(g(x)) $
-
+      - $ (tan g(x))' = sec^2(g(x)) dot g'(x) $
     ],
   )]
 
@@ -882,3 +882,64 @@ $
     ],
   )]
 
+#pagebreak()
+
+#v(15pt)
+
+
+#text(primaryColor, size: 20pt)[#sym.square.filled ] #underline[#subtitle(true)[Derivada de funciones trigonometricas inversas:]]
+
+#v(6pt)
+#grid(
+    columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 7%)[
+      #set text(size: 15pt)
+      #set par(leading: 1.5em)
+
+      - $(arcsin(x))' = 1/(sqrt(1-x^2)), -1<=x<=1$
+      - $(arccos(x))' = -1/(sqrt(1-x^2)), -1<=x<=1 $
+   
+
+    ], box[
+      #set par(leading: 1em)
+      #set text(size: 15pt)
+      - $(arctan(x))' = 1/(1+x^2) $
+
+      
+
+    ],
+  )
+
+
+#text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Ecuación de la recta tangente:]]
+
+
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(
+      white, size: 16pt, baseline: 8pt, weight: "regular",
+    )[Introducción gráfica], title-width: 55%, height: 50%, title-direction: "left", body: [
+      #set align(center)
+      #pad(
+        top: -20pt, left: 40pt,
+      )[
+        #image("assets/recta-tangente.svg", fit: "contain", width: 540pt, height: 360pt)
+      ]
+    ],
+  )
+]
+#v(15pt)
+#align(
+  center,
+)[#recuadro(
+    title: text(
+      white, size: 16pt, baseline: 7pt, weight: "regular",
+    )[Ecuación de la recta tangente], width: 60%, height: 10%, title-width: 100%, title-direction: "center", body: [
+      #set text(size: 20pt)
+      #move(dx: 40pt, dy: 0pt)[$
+          y = f'(a)(x-a) + f(a)
+        $
+      ]
+    ],
+  )]
