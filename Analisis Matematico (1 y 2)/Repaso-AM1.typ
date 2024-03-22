@@ -886,32 +886,25 @@ $
 
 #v(15pt)
 
-
 #text(primaryColor, size: 20pt)[#sym.square.filled ] #underline[#subtitle(true)[Derivada de funciones trigonometricas inversas:]]
 
 #v(6pt)
 #grid(
-    columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 7%)[
-      #set text(size: 15pt)
-      #set par(leading: 1.5em)
+  columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 7%)[
+    #set text(size: 15pt)
+    #set par(leading: 1.5em)
 
-      - $(arcsin(x))' = 1/(sqrt(1-x^2)), -1<=x<=1$
-      - $(arccos(x))' = -1/(sqrt(1-x^2)), -1<=x<=1 $
-   
+    - $(arcsin(x))' = 1/(sqrt(1-x^2)), -1<=x<=1$
+    - $(arccos(x))' = -1/(sqrt(1-x^2)), -1<=x<=1 $
 
-    ], box[
-      #set par(leading: 1em)
-      #set text(size: 15pt)
-      - $(arctan(x))' = 1/(1+x^2) $
-
-      
-
-    ],
-  )
-
+  ], box[
+    #set par(leading: 1em)
+    #set text(size: 15pt)
+    - $(arctan(x))' = 1/(1+x^2) $
+  ],
+)
 
 #text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Ecuación de la recta tangente:]]
-
 
 #align(
   center,
@@ -924,7 +917,9 @@ $
       #pad(
         top: -20pt, left: 40pt,
       )[
-        #image("assets/recta-tangente.svg", fit: "contain", width: 540pt, height: 360pt)
+        #image(
+          "assets/recta-tangente.svg", fit: "contain", width: 540pt, height: 360pt,
+        )
       ]
     ],
   )
