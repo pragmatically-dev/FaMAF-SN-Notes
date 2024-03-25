@@ -990,5 +990,54 @@ Sea
 #v(15pt)
 
 #text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Derivadas de orden superior:]]
+\
+
+La derivada de una función $f$ es una función $f'$ que a su vez puede ser derivable en ciertos puntos.
+
+La derivada de la derivada se llama #underline()[_Derivada segunda_] y se denota $f'' o f^((2)$
+
+Si se continúa este proceso, se puede definir la *_n-ésima_* derivada, es decir _derivada de orden n_: $f^((n)) $ o también $(d^n)/(d x^n)f(x) = f^((n))$
+
+#v(15pt)
+#align(center)[
+#recuadro(
+  title: text(
+    white, size: 16.5pt, baseline: 8pt, weight: "regular",
+  )[Ejemplo Ilustrativo], title-width: 46%, height: 20%,width:80%, title-direction: "left", body: [
+   #move(dx: 10%,dy:3%)[#grid(
+    columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 60%)[
+
+      #set text(size: 18pt)
+      - $f(x) &= x^4 $
+
+      - $f'(x) &= 4x^3$ 
+
+      - $f''(x) &= 12x^2$ 
+    ], box[
+      #set text(size: 18pt)
+
+      - $f^((3))(x) &= 24x$ 
+
+      - $f^((4))(x) &= 24$ 
+
+      - $f^((5))(x) &= 0$ 
+
+
+    ],
+  )
+]  ]
+)
+]
+
+#align(center)[_Como se puede observar, se va bajando el grado del monomio_ 
+]
+
+\
+#text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Diferenciación logarítmica:]]
+\
+
+
+
+
 
 
