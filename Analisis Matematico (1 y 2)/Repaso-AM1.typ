@@ -938,3 +938,57 @@ $
       ]
     ],
   )]
+
+  #pagebreak()
+
+#v(15pt)
+
+
+
+  #text(primaryColor, size: 20pt)[#sym.square.filled  ]  #text(size:18pt)[#underline[Ejemplo]]
+
+Sea
+  $
+    (x^2)/(3^2) + (y^2)/(6^2) = 1 
+  $
+  Dar la ecuación de la recta tangente al gráfico de la elipse en el punto $(-1,4sqrt(2))$ \
+
+  $
+    y^2 = 6^2(1-(x^2)/(3^2)) #h(50pt) y = plus.minus sqrt(6^2-(6^2)/(3^2)x^2)
+  $
+
+  $
+    (-1, underbrace( (4 sqrt(2)  ) ,"> 0" ) ) -> #rect(height: 30pt)[#pad(5pt)[$f(x)= sqrt(6^2 -4x^2)$]] #h(50pt)f(-1)=sqrt(6^2-4)=sqrt(32)=4sqrt(2) \
+
+    r=A x+B #h(50pt) A=f'(-1) #h(50pt) f'(x)=1/2 dot (6^2 -2^2x^2)^(-1/2) dot (-8x) \
+
+    f'(-1)=1/(2sqrt(6^2 -2^2)) dot (-8)dot (-1) = 8/(2 dot 4 dot sqrt(2)) = 1/sqrt(2) = #rect(height: 30pt)[#pad(top:3pt)[$sqrt(2)/2 = A$]]  \
+
+    x= 1-> r=f(-1)=4sqrt(2) => 4sqrt(2) = A(-1) + B
+ -> 4sqrt(2) = -(sqrt(2))/(2) + B \
+
+-> B = 4sqrt(2)+(sqrt(2))/(2) = sqrt(2)(4 - 1/2) =  #rect(height: 30pt)[#pad(top:3pt)[$ 9/2 sqrt(2) =B$]]
+
+    $
+#v(25pt)
+    #align(
+  center,
+)[#recuadro(
+    title: text(
+      white, size: 16pt, baseline: 7pt, weight: "regular",
+    )[Resultado], width: 40%, height: 14.5%, title-width: 100%, title-direction: "center", body: [
+      #set text(size: 17pt)
+      #move(dx: 19.2pt, dy: 0pt)[$
+          r = underbrace(sqrt(2)/2,"A" )x + underbrace(9/2 sqrt(2),"B")
+        $
+      ]
+    ],
+  )]
+
+#pagebreak()
+
+#v(15pt)
+
+#text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Derivadas de orden superior:]]
+
+
