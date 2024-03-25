@@ -1156,7 +1156,7 @@ $
             $
               lim_(x->-infinity)f(x)=L " y/o " "" lim_(x->+infinity)f(x)=L$]
         
-        6. Cuando crece y y decrece la funcion.
+        6. Cuando crece y y decrece la funcion #text(size: 9pt,baseline: -2pt,fill: blue)[#link((page:10,x:1pt,y:1pt))[(en base a la pendiente)]].
       ]
     ],
   )
