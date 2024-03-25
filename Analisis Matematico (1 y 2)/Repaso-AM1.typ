@@ -664,7 +664,7 @@ y la pendiente en si de la recta tangente se define:
 
 #pagebreak()
 
-#v(10pt)
+#v(10pt) 
 
 #recuadro(
   title: text(white, size: 15pt, baseline: 7pt, weight: "regular")[Observación], title-width: 20%, height: 10%, title-direction: "left", width: 100%, body: [
@@ -1243,3 +1243,20 @@ $
 #v(15pt)
 
 
+
+
+#recuadro(
+  title: text(white, size: 15pt, baseline: 8pt, weight: "regular")[Teorema de Fermat ], title-width: 45%, height: 23.5%, title-direction: "left", width: 100%, body: [
+    #align(
+      center,
+    )[
+      #v(10pt)
+     Si $f$ tiene un extremo local (ya sea máximo o mínimo) en $x = c$ y si $f$ es derivable #text(size: 8pt,baseline: -4pt,fill:blue)[#link((page:11,x:1pt,y:1pt))[[Véase]] ]  en $x=c$, entonces $f'(c) =0$. Es decir:
+     $
+      underbrace("Si" x=c "es extremo" and exists f'(c),"Hipotesis") =>f'(c)=0
+     $
+
+  #align(left)[- Es importante aclarar que NO vale la recíproca.]
+    ]
+  ],
+)
