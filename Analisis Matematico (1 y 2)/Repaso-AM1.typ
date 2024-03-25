@@ -1038,35 +1038,10 @@ también $(d^n)/(d x^n)f(x) = f^((n))$
 Esta técnica de derivación facilita en ciertas ocasiones hallar la derivada de
 una función $f$; a continuación veremos cómo realizar el procedimiento con un
 ejemplo.
-
+#pad(top:-15pt,left: -15pt)[
 $
-  f(x) = (x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2)
-$
-
-1. Tomar logaritmo natural de ambos lados
-$
-  ln(f(x)) = ln((x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2)) underbrace(=, "Prop.Logaritmos") ln(x^(5/4))+ ln(sqrt(x^2+4)) - ln((4x -2)^2) \
-
-  ln(f(x)) = 5/4 dot ln(x) + 1/2 dot ln(x^2 +4) - 2 dot ln((4x-2)^2)
-$
-
-2. Derivar ambos miembros
-
-$
-  (ln(f(x)))' = (5/4 dot ln(x))' + (1/2 dot ln(x^2 +4))' - (2 dot ln((4x-2)^2))'
-$
-
-#pagebreak()
-
-#v(15pt)
-
-3. Despejar $f'(x)$
-
-$
-  f'(x) &= f(x) dot (5/(4x) + (x)/((x^2+4)) - 8/(4x -2) ) \ &=(x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2) dot (5/(4x) + (x)/((x^2+4)) - 8/(4x -2) )
-$
-
-#v(30pt)
+f(x) = (x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2)
+$]
 
 #align(
   center,
@@ -1104,6 +1079,49 @@ $
     ],
   )
 ]
+#pagebreak()
+
+#v(15pt)
+
+Sea 
+#move(dy: -15pt,dx:36%)[$
+f(x) = (x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2)
+$
+]
+1. Tomar logaritmo natural de ambos lados
+$
+  ln(f(x)) = ln((x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2)) underbrace(=, "Prop.Logaritmos") ln(x^(5/4))+ ln(sqrt(x^2+4)) - ln((4x -2)^2) \
+
+  ln(f(x)) = 5/4 dot ln(x) + 1/2 dot ln(x^2 +4) - 2 dot ln((4x-2)^2)
+$
+\
+2. Derivar ambos miembros
+
+$
+  (ln(f(x)))' = (5/4 dot ln(x))' + (1/2 dot ln(x^2 +4))' - (2 dot ln((4x-2)^2))'
+$
+
+\
+3. Despejar $f'(x)$
+
+$
+  f'(x) &= f(x) dot (5/(4x) + (x)/((x^2+4)) - 8/(4x -2) ) \ 
+$
+#v(30pt)
+#align(
+  center,
+)[#recuadro(
+    title: text(white, size: 16pt, baseline: 7pt, weight: "regular")[Resultado], width: 80%, height: 14.5%, title-width: 100%, title-direction: "center", body: [
+      #set text(size: 17pt)
+      #move(dx: 8pt, dy: 4pt)[
+        $
+          f'(x)=(x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2) dot (5/(4x) + (x)/((x^2+4)) - 8/(4x -2) )
+        $
+      ]
+    ],
+  )]
+#v(30pt)
+
 
 #pagebreak()
 
@@ -1218,3 +1236,10 @@ $
     ],
   )
 ]
+
+
+
+#pagebreak()
+#v(15pt)
+
+
