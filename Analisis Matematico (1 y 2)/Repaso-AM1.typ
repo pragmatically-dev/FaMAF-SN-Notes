@@ -939,47 +939,42 @@ $
     ],
   )]
 
-  #pagebreak()
+#pagebreak()
 
 #v(15pt)
 
+#text(primaryColor, size: 20pt)[#sym.square.filled ] #text(size: 18pt)[#underline[Ejemplo]]
 
+Sea la elipse:
+#text(size: 18pt)[$
+    (x^2)/(3^2) + (y^2)/(6^2) = 1
+  $]
+Dar la ecuación de la recta tangente al gráfico de la elipse en el punto $(-1,4sqrt(2))$ \
 
-  #text(primaryColor, size: 20pt)[#sym.square.filled  ]  #text(size:18pt)[#underline[Ejemplo]]
+$
+  y^2 = 6^2(1-(x^2)/(3^2)) #h(50pt) y = plus.minus sqrt(6^2-(6^2)/(3^2)x^2)
+$
 
-Sea
-  $
-    (x^2)/(3^2) + (y^2)/(6^2) = 1 
-  $
-  Dar la ecuación de la recta tangente al gráfico de la elipse en el punto $(-1,4sqrt(2))$ \
+$
+  (-1, underbrace((4 sqrt(2) ), "> 0") ) -> #rect(height: 30pt)[#pad(5pt)[$f(x)= sqrt(6^2 -4x^2)$]] #h(50pt)f(-1)=sqrt(6^2-4)=sqrt(32)=4sqrt(2) \
 
-  $
-    y^2 = 6^2(1-(x^2)/(3^2)) #h(50pt) y = plus.minus sqrt(6^2-(6^2)/(3^2)x^2)
-  $
+  r=A x+B #h(50pt) A=f'(-1) #h(50pt) f'(x)=1/2 dot (6^2 -2^2x^2)^(-1/2) dot (-8x) \
 
-  $
-    (-1, underbrace( (4 sqrt(2)  ) ,"> 0" ) ) -> #rect(height: 30pt)[#pad(5pt)[$f(x)= sqrt(6^2 -4x^2)$]] #h(50pt)f(-1)=sqrt(6^2-4)=sqrt(32)=4sqrt(2) \
+  f'(-1)=1/(2sqrt(6^2 -2^2)) dot (-8)dot (-1) = 8/(2 dot 4 dot sqrt(2)) = 1/sqrt(2) = #rect(height: 30pt)[#pad(top: 3pt)[$sqrt(2)/2 = A$]] \
 
-    r=A x+B #h(50pt) A=f'(-1) #h(50pt) f'(x)=1/2 dot (6^2 -2^2x^2)^(-1/2) dot (-8x) \
+  x= 1-> r=f(-1)=4sqrt(2) => 4sqrt(2) = A(-1) + B
+  -> 4sqrt(2) = -(sqrt(2))/(2) + B \
 
-    f'(-1)=1/(2sqrt(6^2 -2^2)) dot (-8)dot (-1) = 8/(2 dot 4 dot sqrt(2)) = 1/sqrt(2) = #rect(height: 30pt)[#pad(top:3pt)[$sqrt(2)/2 = A$]]  \
-
-    x= 1-> r=f(-1)=4sqrt(2) => 4sqrt(2) = A(-1) + B
- -> 4sqrt(2) = -(sqrt(2))/(2) + B \
-
--> B = 4sqrt(2)+(sqrt(2))/(2) = sqrt(2)(4 - 1/2) =  #rect(height: 30pt)[#pad(top:3pt)[$ 9/2 sqrt(2) =B$]]
-
-    $
+  -> B = 4sqrt(2)+(sqrt(2))/(2) = sqrt(2)(4 - 1/2) = #rect(height: 30pt)[#pad(top: 3pt)[$ 9/2 sqrt(2) =B$]]
+$
 #v(25pt)
-    #align(
+#align(
   center,
 )[#recuadro(
-    title: text(
-      white, size: 16pt, baseline: 7pt, weight: "regular",
-    )[Resultado], width: 40%, height: 14.5%, title-width: 100%, title-direction: "center", body: [
+    title: text(white, size: 16pt, baseline: 7pt, weight: "regular")[Resultado], width: 40%, height: 14.5%, title-width: 100%, title-direction: "center", body: [
       #set text(size: 17pt)
       #move(dx: 19.2pt, dy: 0pt)[$
-          r = underbrace(sqrt(2)/2,"A" )x + underbrace(9/2 sqrt(2),"B")
+          r = underbrace(sqrt(2)/2, "A")x + underbrace(9/2 sqrt(2), "B")
         $
       ]
     ],
@@ -992,52 +987,125 @@ Sea
 #text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Derivadas de orden superior:]]
 \
 
-La derivada de una función $f$ es una función $f'$ que a su vez puede ser derivable en ciertos puntos.
+La derivada de una función $f$ es una función $f'$ que a su vez puede ser
+derivable en ciertos puntos.
 
 La derivada de la derivada se llama #underline()[_Derivada segunda_] y se denota $f'' o f^((2)$
 
-Si se continúa este proceso, se puede definir la *_n-ésima_* derivada, es decir _derivada de orden n_: $f^((n)) $ o también $(d^n)/(d x^n)f(x) = f^((n))$
+Si se continúa este proceso, se puede definir la *_n-ésima_* derivada, es decir _derivada de orden n_: $f^((n)) $ o
+también $(d^n)/(d x^n)f(x) = f^((n))$
 
 #v(15pt)
-#align(center)[
-#recuadro(
-  title: text(
-    white, size: 16.5pt, baseline: 8pt, weight: "regular",
-  )[Ejemplo Ilustrativo], title-width: 46%, height: 20%,width:80%, title-direction: "left", body: [
-   #move(dx: 10%,dy:3%)[#grid(
-    columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 60%)[
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(
+      white, size: 16.5pt, baseline: 8pt, weight: "regular",
+    )[Ejemplo Ilustrativo], title-width: 46%, height: 20%, width: 80%, title-direction: "left", body: [
+      #move(
+        dx: 10%, dy: 3%,
+      )[#grid(
+          columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 60%)[
 
-      #set text(size: 18pt)
-      - $f(x) &= x^4 $
+            #set text(size: 18pt)
+            - $f(x) &= x^4 $
 
-      - $f'(x) &= 4x^3$ 
+            - $f'(x) &= 4x^3$
 
-      - $f''(x) &= 12x^2$ 
-    ], box[
-      #set text(size: 18pt)
+            - $f''(x) &= 12x^2$
+          ], box[
+            #set text(size: 18pt)
 
-      - $f^((3))(x) &= 24x$ 
+            - $f^((3))(x) &= 24x$
 
-      - $f^((4))(x) &= 24$ 
+            - $f^((4))(x) &= 24$
 
-      - $f^((5))(x) &= 0$ 
+            - $f^((5))(x) &= 0$
 
-
+          ],
+        )
+      ]
     ],
   )
-]  ]
-)
 ]
 
-#align(center)[_Como se puede observar, se va bajando el grado del monomio_ 
+#align(center)[_Como se puede observar, se va bajando el grado del monomio_
 ]
 
-\
 #text(primaryColor, size: 30pt)[#sym.square.filled ] #underline[#title[Diferenciación logarítmica:]]
-\
 
+Esta técnica de derivación facilita en ciertas ocasiones hallar la derivada de
+una función $f$; a continuación veremos cómo realizar el procedimiento con un
+ejemplo.
 
+$
+  f(x) = (x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2)
+$
 
+1. Tomar logaritmo natural de ambos lados
+$
+  ln(f(x)) = ln((x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2)) underbrace(=, "Prop.Logaritmos") ln(x^(5/4))+ ln(sqrt(x^2+4)) - ln((4x -2)^2) \
 
+  ln(f(x)) = 5/4 dot ln(x) + 1/2 dot ln(x^2 +4) - 2 dot ln((4x-2)^2)
+$
 
+2. Derivar ambos miembros
+
+$
+  (ln(f(x)))' = (5/4 dot ln(x))' + (1/2 dot ln(x^2 +4))' - (2 dot ln((4x-2)^2))'
+$
+
+#pagebreak()
+
+#v(15pt)
+
+3. Despejar $f'(x)$
+
+$
+  f'(x) &= f(x) dot (5/(4x) + (x)/((x^2+4)) - 8/(4x -2) ) \ &=(x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2) dot (5/(4x) + (x)/((x^2+4)) - 8/(4x -2) )
+$
+
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(
+      white, size: 15pt, baseline: 8pt, weight: "regular",
+    )[Repaso de propiedades básicas de lo logaritmos y exponencial], title-width: 100%, height: 20%, width: 90%, title-direction: "center", body: [
+      #move(
+        dx: 07%, dy: 3%,
+      )[#grid(
+          columns: (1fr, 1fr), rows: (auto, auto), gutter: 20pt, box(width: 100%, height: 60%)[
+
+            #set text(size: 14pt)
+            - $ log_a (x dot y) = log_a (x) + log_a (y)$
+
+            - $log_a (x / y) = log_a (x) - log_a (y)$
+
+            - $log_a (x^n) = n dot log_a (x)$
+            - $ln(e^x) = x $ y $ e^ln(x) =x$
+          ], box[
+            #set text(size: 14pt)
+
+            - $log_a (1/x) = -log_a (x)$
+
+            - $log_a (x) = ln(x) / ln(a)$
+
+            - $a^x = e^(x dot ln(a))$
+
+            - $ ln(e) = 1$
+
+          ],
+        )
+      ]
+    ],
+  )
+]
+
+#pagebreak()
+
+#v(15pt)
+
+#underline[#title[3. Análisis de funciones:]]
 
