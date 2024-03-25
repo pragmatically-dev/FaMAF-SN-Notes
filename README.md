@@ -20,5 +20,7 @@ Se informa que el contenido de las notas incluidas en este repositorio se ha ela
 
 A pesar de los esfuerzos por asegurar la precisión y claridad de la información, es posible que existan malentendidos o pequeños errores por parte del autor. 
 
-Se agradece sinceramente a los profesores de la FAMAF por su dedicación y por el material educativo proporcionado. 
+Se agradece sinceramente a los profesores de la FAMAF por su dedicación y por el material educativo proporcionado.
+
+_Son bienvenidas las sugerencias y correcciones a través de issues_
 
