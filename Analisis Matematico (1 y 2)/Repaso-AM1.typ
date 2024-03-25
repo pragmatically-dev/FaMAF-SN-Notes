@@ -1066,6 +1066,8 @@ $
   f'(x) &= f(x) dot (5/(4x) + (x)/((x^2+4)) - 8/(4x -2) ) \ &=(x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2) dot (5/(4x) + (x)/((x^2+4)) - 8/(4x -2) )
 $
 
+#v(30pt)
+
 #align(
   center,
 )[
@@ -1109,3 +1111,110 @@ $
 
 #underline[#title[3. Análisis de funciones:]]
 
+
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(
+      white, size: 16pt, baseline: 4pt, weight: "regular",
+    )[Información acerca de $f(x)$], title-width: 50%, height: 49.5%, title-direction: "left", width: 90%, body: [
+      #set text(size: 16pt);
+      #pad(
+        10pt, left: 12%,
+      )[
+
+        #set par(leading: 1em)
+
+        1. Dominio: $DD$om $f$ = ${x in RR | exists f(x)}$
+        2. Continuidad en $II$ : $lim_(x->a)f(x) = f(a) , forall a in II$
+        3. Discontinuidades evitables y de salto
+        4. Discontinuidades esenciales:
+          #align(left)[ - Asíntota Vertical en $x=a$:
+            $
+              lim_(x->a^(#math.plus.minus))f(x) = #math.plus.minus infinity$ ]
+        5. Comportamiento en $abs(x)$ grandes:
+          #align(left)[- Asíntotas Horizontales en:\ $y=L$ #h(7pt)y/o #h(7pt) $y=M$
+            $
+              lim_(x->-infinity)f(x)=L " y/o " "" lim_(x->+infinity)f(x)=L$]
+        
+        6. Cuando crece y y decrece la funcion.
+      ]
+    ],
+  )
+]
+
+
+#recuadro(
+  title: text(white, size: 15pt, baseline: 7pt, weight: "regular")[Máximos y mínimos absolutos ], title-width: 45%, height: 35%, title-direction: "left", width: 100%, body: [
+    #align(
+      center,
+    )[
+      #v(10pt)
+      - Una función $f$ tiene un máximo absoluto en un punto $c$ de su dominio si $f(c) >= f(x), forall x in DD"om" f $. 
+      El punto $c$ se llama *_punto de máximo_* de $f$, y $f(c)$ se llama *_valor de máximo_* 
+      #v(30pt)    
+    - Una función $f$ tiene un mínimo absoluto en un punto $c$ de su dominio si $f(c) <= f(x), forall x in DD"om" f$; \
+    El punto $c$ se llama *_punto de mínimo_* de $f$ y $f(c)$ se llama *_valor de mínimo_*
+    ]
+  ],
+)
+
+#pagebreak()
+#v(15pt)
+
+
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(
+      white, size: 16pt, baseline: 8pt, weight: "regular",
+    )[Ejemplo en gráfica], title-width: 45%, height: 26%, title-direction: "left", body: [
+      #set align(center)
+      #pad(
+        top: -50pt,
+      )[
+        #image(
+          "assets/max-min-abs.png", fit: "contain", width: 440pt, height: 240pt,
+        )
+      ]
+    ],
+  )
+]
+
+
+#recuadro(
+  title: text(white, size: 15pt, baseline: 8pt, weight: "regular")[Máximos y mínimos locales ], title-width: 45%, height: 28%, title-direction: "left", width: 100%, body: [
+    #align(
+      center,
+    )[
+      #v(10pt)
+      - Una función $f$ tiene un máximo local en un punto $c$ de su dominio si hay un intervalo abierto $italic( II)$ que contiene a $c$ tal que $f(c) >= f(x), forall x in II$ \
+      El punto $c$ se llama *_punto de máximo local_* de $f$
+
+      #v(20pt)    
+    - Una función $f$ tiene un mínimo local en un punto $d$ de su dominio si hay un intervalo abierto $italic( JJ)$ que contiene a $d$ tal que $f(d) <= f(x), forall x in JJ$ \
+      El punto $d$ se llama *_punto de mínimo local_* de $f$
+    ]
+  ],
+)
+
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(
+      white, size: 16pt, baseline: 8pt, weight: "regular",
+    )[Ejemplo en gráfica], title-width: 45%, height: 31%, title-direction: "left", body: [
+      #set align(center)
+      #pad(
+        top: -35pt,
+      )[
+        #image(
+          "assets/max-min-local.png", fit: "contain", width: 340pt, height: 240pt,
+        )
+      ]
+    ],
+  )
+]
