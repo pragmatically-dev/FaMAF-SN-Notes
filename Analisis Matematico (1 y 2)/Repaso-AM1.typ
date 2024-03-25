@@ -664,7 +664,7 @@ y la pendiente en si de la recta tangente se define:
 
 #pagebreak()
 
-#v(10pt) 
+#v(10pt)
 
 #recuadro(
   title: text(white, size: 15pt, baseline: 7pt, weight: "regular")[Observación], title-width: 20%, height: 10%, title-direction: "left", width: 100%, body: [
@@ -1038,10 +1038,11 @@ también $(d^n)/(d x^n)f(x) = f^((n))$
 Esta técnica de derivación facilita en ciertas ocasiones hallar la derivada de
 una función $f$; a continuación veremos cómo realizar el procedimiento con un
 ejemplo.
-#pad(top:-15pt,left: -15pt)[
-$
-f(x) = (x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2)
-$]
+#pad(top: -15pt, left: -15pt)[
+  $
+    f(x) = (x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2)
+  $
+]
 
 #align(
   center,
@@ -1083,10 +1084,10 @@ $]
 
 #v(15pt)
 
-Sea 
-#move(dy: -15pt,dx:36%)[$
-f(x) = (x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2)
-$
+Sea
+#move(dy: -15pt, dx: 36%)[$
+    f(x) = (x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2)
+  $
 ]
 1. Tomar logaritmo natural de ambos lados
 $
@@ -1105,7 +1106,7 @@ $
 3. Despejar $f'(x)$
 
 $
-  f'(x) &= f(x) dot (5/(4x) + (x)/((x^2+4)) - 8/(4x -2) ) \ 
+  f'(x) &= f(x) dot (5/(4x) + (x)/((x^2+4)) - 8/(4x -2) ) \
 $
 #v(30pt)
 #align(
@@ -1113,7 +1114,9 @@ $
 )[#recuadro(
     title: text(white, size: 16pt, baseline: 7pt, weight: "regular")[Resultado], width: 80%, height: 14.5%, title-width: 100%, title-direction: "center", body: [
       #set text(size: 17pt)
-      #move(dx: 8pt, dy: 4pt)[
+      #move(
+        dx: 8pt, dy: 4pt,
+      )[
         $
           f'(x)=(x^(5/4) dot sqrt(x^2 + 4))/((4x -2)^2) dot (5/(4x) + (x)/((x^2+4)) - 8/(4x -2) )
         $
@@ -1122,13 +1125,11 @@ $
   )]
 #v(30pt)
 
-
 #pagebreak()
 
 #v(15pt)
 
 #underline[#title[3. Análisis de funciones:]]
-
 
 #align(
   center,
@@ -1155,32 +1156,36 @@ $
           #align(left)[- Asíntotas Horizontales en:\ $y=L$ #h(7pt)y/o #h(7pt) $y=M$
             $
               lim_(x->-infinity)f(x)=L " y/o " "" lim_(x->+infinity)f(x)=L$]
-        
-        6. Cuando crece y y decrece la funcion #text(size: 9pt,baseline: -2pt,fill: blue)[#link((page:10,x:1pt,y:1pt))[(en base a la pendiente)]].
+
+        6. Cuando crece y y decrece la funcion #text(
+            size: 9pt, baseline: -2pt, fill: blue,
+          )[#link((page: 10, x: 1pt, y: 1pt))[(en base a la pendiente)]].
       ]
     ],
   )
 ]
 
-
 #recuadro(
-  title: text(white, size: 15pt, baseline: 7pt, weight: "regular")[Máximos y mínimos absolutos ], title-width: 45%, height: 35%, title-direction: "left", width: 100%, body: [
+  title: text(
+    white, size: 15pt, baseline: 7pt, weight: "regular",
+  )[Máximos y mínimos absolutos ], title-width: 45%, height: 35%, title-direction: "left", width: 100%, body: [
     #align(
       center,
     )[
       #v(10pt)
-      - Una función $f$ tiene un máximo absoluto en un punto $c$ de su dominio si $f(c) >= f(x), forall x in DD"om" f $. 
-      El punto $c$ se llama *_punto de máximo_* de $f$, y $f(c)$ se llama *_valor de máximo_* 
-      #v(30pt)    
-    - Una función $f$ tiene un mínimo absoluto en un punto $c$ de su dominio si $f(c) <= f(x), forall x in DD"om" f$; \
-    El punto $c$ se llama *_punto de mínimo_* de $f$ y $f(c)$ se llama *_valor de mínimo_*
+      - Una función $f$ tiene un máximo absoluto en un punto $c$ de su dominio si $f(c) >= f(x), forall x in DD"om" f $.
+      El punto $c$ se llama *_punto de máximo_* de $f$, y $f(c)$ se llama *_valor de
+      máximo_*
+      #v(30pt)
+      - Una función $f$ tiene un mínimo absoluto en un punto $c$ de su dominio si $f(c) <= f(x), forall x in DD"om" f$;\
+      El punto $c$ se llama *_punto de mínimo_* de $f$ y $f(c)$ se llama *_valor de
+      mínimo_*
     ]
   ],
 )
 
 #pagebreak()
 #v(15pt)
-
 
 #align(
   center,
@@ -1193,27 +1198,28 @@ $
       #pad(
         top: -50pt,
       )[
-        #image(
-          "assets/max-min-abs.png", fit: "contain", width: 440pt, height: 240pt,
-        )
+        #image("assets/max-min-abs.png", fit: "contain", width: 440pt, height: 240pt)
       ]
     ],
   )
 ]
 
-
 #recuadro(
-  title: text(white, size: 15pt, baseline: 8pt, weight: "regular")[Máximos y mínimos locales ], title-width: 45%, height: 28%, title-direction: "left", width: 100%, body: [
+  title: text(
+    white, size: 15pt, baseline: 8pt, weight: "regular",
+  )[Máximos y mínimos locales ], title-width: 45%, height: 28%, title-direction: "left", width: 100%, body: [
     #align(
       center,
     )[
       #v(10pt)
-      - Una función $f$ tiene un máximo local en un punto $c$ de su dominio si hay un intervalo abierto $italic( II)$ que contiene a $c$ tal que $f(c) >= f(x), forall x in II$ \
+      - Una función $f$ tiene un máximo local en un punto $c$ de su dominio si hay un
+        intervalo abierto $italic(II)$ que contiene a $c$ tal que $f(c) >= f(x), forall x in II$ \
       El punto $c$ se llama *_punto de máximo local_* de $f$
 
-      #v(20pt)    
-    - Una función $f$ tiene un mínimo local en un punto $d$ de su dominio si hay un intervalo abierto $italic( JJ)$ que contiene a $d$ tal que $f(d) <= f(x), forall x in JJ$ \
-      El punto $d$ se llama *_punto de mínimo local_* de $f$
+      #v(20pt)
+      - Una función $f$ tiene un mínimo local en un punto $d$ de su dominio si hay un
+        intervalo abierto $italic(JJ)$ que contiene a $d$ tal que $f(d) <= f(x), forall x in JJ$ \
+        El punto $d$ se llama *_punto de mínimo local_* de $f$
     ]
   ],
 )
@@ -1237,26 +1243,27 @@ $
   )
 ]
 
-
-
 #pagebreak()
 #v(15pt)
 
-
-
-
 #recuadro(
-  title: text(white, size: 15pt, baseline: 8pt, weight: "regular")[Teorema de Fermat ], title-width: 45%, height: 23.5%, title-direction: "left", width: 100%, body: [
+  title: text(
+    white, size: 15pt, baseline: 8pt, weight: "regular",
+  )[Teorema de Fermat ], title-width: 45%, height: 23.5%, title-direction: "left", width: 100%, body: [
     #align(
       center,
     )[
       #v(10pt)
-     Si $f$ tiene un extremo local (ya sea máximo o mínimo) en $x = c$ y si $f$ es derivable #text(size: 8pt,baseline: -4pt,fill:blue)[#link((page:11,x:1pt,y:1pt))[[Véase]] ]  en $x=c$, entonces $f'(c) =0$. Es decir:
-     $
-      underbrace("Si" x=c "es extremo" and exists f'(c),"Hipotesis") =>f'(c)=0
-     $
+      Si $f$ tiene un extremo local (ya sea máximo o mínimo) en $x = c$ y si $f$ es
+      derivable #text(
+        size: 8pt, baseline: -4pt, fill: blue,
+      )[#link((page: 11, x: 1pt, y: 1pt))[[Véase]] ] en $x=c$, entonces $f'(c) =0$. Es
+      decir:
+      $
+        underbrace("Si" x=c "es extremo" and exists f'(c), "Hipotesis") =>f'(c)=0
+      $
 
-  #align(left)[- Es importante aclarar que NO vale la recíproca.]
+      #align(left)[- Es importante aclarar que NO vale la recíproca.]
     ]
   ],
 )
