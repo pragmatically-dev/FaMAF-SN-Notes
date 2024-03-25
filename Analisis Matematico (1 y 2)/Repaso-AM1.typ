@@ -1268,8 +1268,6 @@ $
   ],
 )
 
-
-
 #recuadro(
   title: text(
     white, size: 15pt, baseline: 8pt, weight: "regular",
@@ -1278,7 +1276,8 @@ $
       center,
     )[
       #v(10pt)
-      Un punto crítico de una función es un número $c$ del dominio de $f$ tal que $f'(c) = 0 $ ó $f'(c)$  no exista, es decir:
+      Un punto crítico de una función es un número $c$ del dominio de $f$ tal que $f'(c) = 0 $ ó $f'(c)$ no
+      exista, es decir:
       #v(10pt)
       $
         P.C = {x in DD"om" f | f'(x) = 0 or exists.not f'(x) }
@@ -1286,9 +1285,6 @@ $
     ]
   ],
 )
-
-
-
 
 #recuadro(
   title: text(
@@ -1298,18 +1294,25 @@ $
       center,
     )[
       #v(6pt)
-      Podemos encontrar el lugar donde se encuentran el máximo y el mínimo en un intervalo cerrado, el #link((page:9,x:1pt,y:1pt))[#text(fill:blue)[Teorema de Weierstrass]] nos asegura que existen.
+      Podemos encontrar el lugar donde se encuentran el máximo y el mínimo en un
+      intervalo cerrado, el #link((page: 9, x: 1pt, y: 1pt))[#text(fill: blue)[Teorema de Weierstrass]] nos
+      asegura que existen.
 
-      #move(dy:10pt)[
-        #align(left)[
-      1. Verificar continuidad en el intervalo cerrado
+      #move(
+        dy: 10pt,
+      )[
+        #align(
+          left,
+        )[
+          1. Verificar continuidad en el intervalo cerrado
 
-      2. Buscar los puntos críticos
-        
-      3. Evaluar la función en los extremos del intervalo y en los $P.C$ que yacen en el intervalo
+          2. Buscar los puntos críticos
 
-      4. Comparar los valores encontrados y elegir cuál es el máximo y cúal el mínimo.
-         ]
+          3. Evaluar la función en los extremos del intervalo y en los $P.C$ que yacen en el
+            intervalo
+
+          4. Comparar los valores encontrados y elegir cuál es el máximo y cúal el mínimo.
+        ]
       ]
     ]
   ],
@@ -1326,12 +1329,11 @@ $
 
   f'(x) = (x^2 +4x)/((x+2)^2), exists f'(x) forall x in DD"om" f \
 
-  P.C: x_c_1 =0, x_c_2=-4,\ x_c_2 in.not [-1,2] \ 
+  P.C: x_c_1 =0, x_c_2=-4,\ x_c_2 in.not [-1,2] \
 
   f(-1) = 1 , f(2)=1 " y " f(0) =0 \
-
 $
-- Tiene máximos absolutos en $x =-1$ y en $x=2$ y tiene mínimo absoluto \ en $x=0$
+- Tiene máximos absolutos en $x =-1$ y en $x=2$ y tiene mínimo absoluto\ en $x=0$
 #pagebreak()
 #v(15pt)
 #recuadro(
@@ -1341,16 +1343,74 @@ $
     #align(
       left,
     )[
-      
-      En este caso no podremos aplicar el #link((page:9,x:1pt,y:1pt))[#text(fill:blue)[Teorema de Weierstrass]] por lo que a continuación se listarán algunos criterios para saber cuando la función no tiene máximos ni mínimos absolutos.
 
-      - Si $lim_(x ->+infinity) f(x) = +infinity or  lim_(x ->-infinity) f(x) = +infinity$ $=>$ $f(x)$ NO tiene máximo absoluto.
+      En este caso no podremos aplicar el #link((page: 9, x: 1pt, y: 1pt))[#text(fill: blue)[Teorema de Weierstrass]] por
+      lo que a continuación se listarán algunos criterios para saber cuando la función
+      no tiene máximos ni mínimos absolutos.
 
-- Si $lim_(x ->+infinity) f(x) = -infinity or  lim_(x ->-infinity) f(x) = -infinity$ $=>$ $f(x)$ NO tiene mínimo absoluto.
+      - Si $lim_(x ->+infinity) f(x) = +infinity or lim_(x ->-infinity) f(x) = +infinity$ $=>$ $f(x)$ NO
+        tiene máximo absoluto.
 
-- Si $f(x)$ tiene $A.V$ tampoco tendrá máximos o mínimos absolutos (esto dependiendo del valor de los límites alrededor de las $A.V$ )
-\
-Es importante aclarar que PUEDE tener máximos o mínimos locales.
-    ]
+      - Si $lim_(x ->+infinity) f(x) = -infinity or lim_(x ->-infinity) f(x) = -infinity$ $=>$ $f(x)$ NO
+        tiene mínimo absoluto.
+
+      - Si $f(x)$ tiene $A.V$ tampoco tendrá máximos o mínimos absolutos (esto
+        dependiendo del valor de los límites alrededor de las $A.V$ )
+      \
+      Es importante aclarar que PUEDE tener máximos o mínimos locales. ]
   ],
 )
+
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(white, size: 14pt, baseline: 8pt, weight: "regular")[Teorema de Rolle], title-width: 37%, height: 28%, title-direction: "left", width: 83%, body: [
+      #align(left)[
+        #v(10pt)
+        Sea $f$ una función tal que:
+        #move(dx: 30%)[
+          1. $f$ es continua en [a,b]
+
+          2. $f$ es derivable en (a,b)
+
+          3. $f(a) = f(b)$
+        ]
+        \
+        Entonces, existe al menos un valor $c in (a,b)$ tal que $f'(c)=0$
+      ]
+    ],
+  )
+]
+
+#align(
+  center,
+)[
+  #recuadro(
+    title: text(white, size: 15pt, baseline: 8pt, weight: "regular")[Definición], title-width: 32%, height: 14%, title-direction: "left", width: 83%, body: [
+      #align(
+        center,
+      )[
+        #v(0pt)
+        #move(dx: -28%)[Sea $f$ una función _*buena*_ si:]
+        #v(3pt)
+        #grid(
+          columns: (1fr, 1fr), rows: (auto, auto), gutter: 8pt, box(width: 100%, height: 60%)[
+
+            1. $f$ es continua en [a,b]
+
+          ], box[
+
+            2. $f$ es derivable en (a,b)
+
+          ],
+        )
+      ]
+    ],
+  )
+]
+
+#pagebreak()
+
+#v(15pt)
+
